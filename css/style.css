@@ -1,0 +1,2767 @@
+/* =========================================================
+   PARVIZ TAVAKOLI-KOLOUR
+   MODERN ACADEMIC / OCEAN RESEARCH WEBSITE
+   ========================================================= */
+
+
+/* =========================================================
+   01. FONTS
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+/* =========================================================
+   02. VARIABLES
+   ========================================================= */
+
+:root {
+
+    --ocean-950: #061c22;
+    --ocean-900: #092a32;
+    --ocean-800: #0c3d47;
+    --ocean-700: #105966;
+
+    --teal: #39a7a4;
+    --teal-light: #8bd7d2;
+
+    --cream: #f7f8f5;
+    --white: #ffffff;
+
+    --text: #16353b;
+    --muted: #63777b;
+
+    --line: rgba(22, 53, 59, 0.12);
+
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+
+    --max-width: 1380px;
+
+    --shadow:
+        0 20px 60px rgba(4, 29, 35, 0.10);
+
+    --transition:
+        all 0.35s cubic-bezier(.2,.7,.2,1);
+}
+
+
+/* =========================================================
+   03. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--sans);
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+::selection {
+    background: var(--teal);
+    color: white;
+}
+
+
+/* =========================================================
+   04. TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--serif);
+
+    font-weight: 500;
+
+    letter-spacing: -0.025em;
+}
+
+
+p {
+    font-size: 16px;
+}
+
+
+.section-label {
+
+    font-family: var(--sans);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--teal);
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   05. HEADER
+   ========================================================= */
+
+.site-header {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(3, 23, 29, .78),
+            rgba(3, 23, 29, .20)
+        );
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.nav-container {
+
+    width: min(
+        calc(100% - 80px),
+        var(--max-width)
+    );
+
+    margin: auto;
+
+    min-height: 86px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.site-name {
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+    transition: var(--transition);
+}
+
+
+.site-name:hover {
+
+    color: var(--teal-light);
+}
+
+
+/* =========================================================
+   06. NAVIGATION
+   ========================================================= */
+
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.main-nav > a,
+.dropdown > a {
+
+    position: relative;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    padding: 32px 0;
+}
+
+
+.main-nav > a::after,
+.dropdown > a::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 24px;
+
+    left: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--teal-light);
+
+    transition: var(--transition);
+}
+
+
+.main-nav > a:hover::after,
+.dropdown > a:hover::after {
+
+    width: 100%;
+}
+
+
+.main-nav > a:hover,
+.dropdown > a:hover {
+
+    color: var(--teal-light);
+}
+
+
+.dropdown {
+
+    position: relative;
+}
+
+
+.dropdown > a span {
+
+    margin-left: 4px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   07. DROPDOWN MENU
+   ========================================================= */
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: 75px;
+
+    left: -20px;
+
+    width: 270px;
+
+    padding: 12px;
+
+    background: rgba(255,255,255,.97);
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid rgba(0,0,0,.05);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(12px);
+
+    transition: var(--transition);
+}
+
+
+.dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+
+.dropdown-menu a {
+
+    display: block;
+
+    padding: 13px 15px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    letter-spacing: .2px;
+
+    border-radius: 3px;
+
+    transition: var(--transition);
+}
+
+
+.dropdown-menu a:hover {
+
+    background: #eaf5f3;
+
+    color: var(--ocean-700);
+
+    padding-left: 21px;
+}
+
+
+/* =========================================================
+   08. HERO
+   ========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    background:
+        url("../images/hero.jpg")
+        center center / cover
+        no-repeat;
+
+    isolation: isolate;
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,25,31,.92) 0%,
+            rgba(3,25,31,.58) 42%,
+            rgba(3,25,31,.12) 100%
+        );
+
+    z-index: -1;
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3,25,31,.72),
+            transparent 45%
+        );
+
+    z-index: -1;
+}
+
+
+.hero-content {
+
+    width: min(
+        calc(100% - 80px),
+        var(--max-width)
+    );
+
+    margin: 0 auto;
+
+    padding:
+        0
+        0
+        105px;
+
+    color: white;
+}
+
+
+.hero-kicker {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: var(--teal-light);
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            58px,
+            8vw,
+            125px
+        );
+
+    line-height: .90;
+
+    letter-spacing: -.055em;
+
+    margin-bottom: 35px;
+}
+
+
+.hero-position {
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    margin-bottom: 5px;
+}
+
+
+.hero-affiliation {
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   09. BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+.button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding:
+        0 24px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+
+.button-light {
+
+    background: white;
+
+    color: var(--ocean-900);
+}
+
+
+.button-light:hover {
+
+    background: var(--teal-light);
+
+    transform:
+        translateY(-3px);
+}
+
+
+.button-outline {
+
+    border:
+        1px solid rgba(255,255,255,.65);
+
+    color: white;
+}
+
+
+.button-outline:hover {
+
+    background: white;
+
+    color: var(--ocean-900);
+
+    transform:
+        translateY(-3px);
+}
+
+
+.button-dark {
+
+    background: var(--ocean-800);
+
+    color: white;
+}
+
+
+.button-dark:hover {
+
+    background: var(--teal);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   10. INTRO / ABOUT
+   ========================================================= */
+
+.intro-section {
+
+    width: min(
+        calc(100% - 80px),
+        1180px
+    );
+
+    margin: auto;
+
+    padding:
+        140px
+        0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, .85fr)
+        minmax(400px, 1fr);
+
+    gap: 110px;
+
+    align-items: center;
+}
+
+
+.intro-image {
+
+    position: relative;
+}
+
+
+.intro-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    left: -25px;
+    bottom: -25px;
+
+    border-left:
+        2px solid var(--teal);
+
+    border-bottom:
+        2px solid var(--teal);
+
+    z-index: -1;
+}
+
+
+.intro-image img {
+
+    height: 570px;
+
+    object-fit: cover;
+}
+
+
+.intro-text h2 {
+
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            65px
+        );
+
+    line-height: 1.06;
+
+    margin-bottom: 30px;
+}
+
+
+.intro-text p {
+
+    max-width: 650px;
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: var(--ocean-800);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    border-bottom:
+        1px solid var(--teal);
+
+    padding-bottom: 5px;
+
+    transition: var(--transition);
+}
+
+
+.text-link:hover {
+
+    color: var(--teal);
+
+    padding-left: 7px;
+}
+
+
+/* =========================================================
+   11. RESEARCH SECTION
+   ========================================================= */
+
+.research-home {
+
+    padding:
+        130px
+        40px;
+
+    background:
+        #eaf3f1;
+}
+
+
+.section-heading {
+
+    width: min(
+        850px,
+        100%
+    );
+
+    margin:
+        0 auto 70px;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+
+    font-size:
+        clamp(
+            45px,
+            5vw,
+            70px
+        );
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading > p:last-child {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   12. RESEARCH CARDS
+   ========================================================= */
+
+.research-grid {
+
+    width: min(
+        1180px,
+        100%
+    );
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1px;
+
+    background:
+        rgba(10,70,77,.15);
+}
+
+
+.research-card {
+
+    position: relative;
+
+    min-height: 350px;
+
+    padding: 42px 34px;
+
+    background: var(--cream);
+
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+
+.research-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: var(--teal);
+
+    transform:
+        scaleX(0);
+
+    transform-origin: left;
+
+    transition: var(--transition);
+}
+
+
+.research-card:hover {
+
+    background: var(--ocean-800);
+
+    color: white;
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 30px 60px
+        rgba(4,40,48,.20);
+}
+
+
+.research-card:hover::before {
+
+    transform:
+        scaleX(1);
+}
+
+
+.card-number {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--teal);
+
+    margin-bottom: 55px;
+}
+
+
+.research-card h3 {
+
+    font-size: 30px;
+
+    line-height: 1.1;
+
+    margin-bottom: 22px;
+}
+
+
+.research-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+.research-card:hover p {
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   13. FIELDWORK SPLIT
+   ========================================================= */
+
+.field-section {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    min-height: 650px;
+}
+
+
+.field-image {
+
+    min-height: 600px;
+
+    background:
+        url("../images/persian-gulf-1.jpg")
+        center center / cover
+        no-repeat;
+}
+
+
+.field-content {
+
+    padding:
+        100px
+        clamp(45px, 8vw, 120px);
+
+    background:
+        var(--ocean-900);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+
+.field-content .section-label {
+
+    color: var(--teal-light);
+}
+
+
+.field-content h2 {
+
+    font-size:
+        clamp(
+            45px,
+            5vw,
+            70px
+        );
+
+    line-height: 1.02;
+
+    max-width: 600px;
+
+    margin-bottom: 28px;
+}
+
+
+.field-content p {
+
+    color:
+        rgba(255,255,255,.72);
+
+    max-width: 570px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   14. PUBLICATIONS HOME
+   ========================================================= */
+
+.publication-home {
+
+    padding:
+        140px
+        30px;
+
+    text-align: center;
+
+    background: white;
+}
+
+
+.publication-home h2 {
+
+    font-size:
+        clamp(
+            45px,
+            6vw,
+            78px
+        );
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.publication-home > p:not(.section-label) {
+
+    max-width: 680px;
+
+    margin: auto;
+
+    color: var(--muted);
+}
+
+/* =========================================================
+   INTERNAL PAGE ALIGNMENT FIX
+   ========================================================= */
+
+
+/* Main content container */
+
+main {
+    width: 100%;
+}
+
+
+/* All normal content sections */
+
+main > section {
+    width: min(1180px, calc(100% - 80px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Hero is full width */
+
+main > .page-hero {
+    width: 100%;
+    margin: 0;
+}
+
+
+/* Internal page hero content */
+
+.page-hero {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.page-hero-content {
+    width: min(1180px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Section headings */
+
+.gallery-heading,
+.section-heading,
+.contact-introduction {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Prevent text from touching the edge */
+
+.gallery-heading,
+.contact-introduction,
+.section-heading {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* CV content */
+
+.cv-section {
+    width: min(1100px, calc(100% - 80px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Publications */
+
+.publications-section {
+    width: min(1100px, calc(100% - 80px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Selected publications */
+
+.selected-publications-section {
+    width: min(1100px, calc(100% - 80px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* About page */
+
+.about-section {
+    width: min(1180px, calc(100% - 80px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Research page */
+
+.research-section {
+    width: min(1180px, calc(100% - 80px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Better headings on internal pages */
+
+main h1,
+main h2,
+main h3 {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+
+/* =========================================================
+   BETTER INTERNAL PAGE SPACING
+   ========================================================= */
+
+.page-content,
+.about-section,
+.research-section,
+.publications-section,
+.selected-publications-section,
+.cv-section,
+.contact-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+/* =========================================================
+   ACADEMIC EXPERIENCE / TIMELINE
+   ========================================================= */
+
+.cv-item,
+.experience-item,
+.timeline-item {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   PUBLICATION READABILITY
+   ========================================================= */
+
+.publication,
+.selected-publication {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.publication h3,
+.selected-publication h3 {
+    max-width: 850px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    main > section {
+        width: calc(100% - 40px);
+    }
+
+    main > .page-hero {
+        width: 100%;
+    }
+
+    .page-hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .page-hero-content {
+        width: 100%;
+    }
+
+    .cv-section,
+    .publications-section,
+    .selected-publications-section,
+    .about-section,
+    .research-section {
+        width: calc(100% - 40px);
+    }
+
+}
+
+
+/* =========================================================
+   16. GENERAL CONTENT SECTIONS
+   ========================================================= */
+
+main section:not(.hero):not(.page-hero) {
+
+    scroll-margin-top: 50px;
+}
+
+
+/* =========================================================
+   17. GALLERY
+   ========================================================= */
+
+.gallery-section {
+
+    padding:
+        120px
+        40px;
+
+    max-width: 1380px;
+
+    margin: auto;
+}
+
+
+.gallery-heading {
+
+    max-width: 750px;
+
+    margin-bottom: 55px;
+}
+
+
+.gallery-heading h2 {
+
+    font-size:
+        clamp(
+            45px,
+            6vw,
+            75px
+        );
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+.gallery-heading p:last-child {
+
+    color: var(--muted);
+}
+
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+}
+
+
+.gallery-grid img {
+
+    height: 330px;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s
+        cubic-bezier(.2,.7,.2,1);
+
+    filter:
+        saturate(.9);
+}
+
+
+.gallery-grid img:hover {
+
+    transform:
+        scale(1.025);
+
+    filter:
+        saturate(1.1);
+}
+
+
+/* =========================================================
+   18. CONTACT
+   ========================================================= */
+
+.contact-section {
+
+    width: min(
+        1180px,
+        calc(100% - 80px)
+    );
+
+    margin: auto;
+
+    padding:
+        130px
+        0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+}
+
+
+.contact-introduction h2 {
+
+    font-size:
+        clamp(
+            45px,
+            5vw,
+            70px
+        );
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.contact-introduction p:not(.section-label) {
+
+    max-width: 570px;
+
+    color: var(--muted);
+}
+
+
+.contact-details {
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+.contact-item {
+
+    padding:
+        28px 0;
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+
+.contact-label {
+
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--teal);
+
+    margin-bottom: 10px;
+}
+
+
+.contact-item h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+.contact-item p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+.contact-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.contact-links a {
+
+    padding:
+        8px 14px;
+
+    border:
+        1px solid var(--line);
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+
+.contact-links a:hover {
+
+    background: var(--ocean-800);
+
+    color: white;
+
+    border-color:
+        var(--ocean-800);
+}
+
+
+/* =========================================================
+   19. PUBLICATION LIST
+   Works with your existing publication HTML
+   ========================================================= */
+
+.publications-section {
+
+    width: min(
+        1100px,
+        calc(100% - 80px)
+    );
+
+    margin: auto;
+
+    padding:
+        120px 0;
+}
+
+
+.publication {
+
+    display: grid;
+
+    grid-template-columns:
+        90px 1fr;
+
+    gap: 35px;
+
+    padding:
+        35px 0;
+
+    border-bottom:
+        1px solid var(--line);
+
+    transition: var(--transition);
+}
+
+
+.publication:hover {
+
+    padding-left: 12px;
+}
+
+
+.publication-number {
+
+    font-family: var(--serif);
+
+    font-size: 35px;
+
+    color:
+        rgba(16,89,102,.25);
+}
+
+
+.publication h3 {
+
+    font-family: var(--sans);
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    letter-spacing: 0;
+}
+
+
+.publication p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-top: 8px;
+}
+
+
+.publication a {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: var(--teal);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   20. CV
+   ========================================================= */
+
+.cv-section {
+
+    width: min(
+        1100px,
+        calc(100% - 80px)
+    );
+
+    margin: auto;
+
+    padding:
+        120px 0;
+}
+
+
+.cv-section h2 {
+
+    font-size: 48px;
+
+    margin:
+        70px 0 30px;
+}
+
+
+.cv-item {
+
+    display: grid;
+
+    grid-template-columns:
+        180px 1fr;
+
+    gap: 40px;
+
+    padding:
+        25px 0;
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+.cv-year {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: var(--teal);
+}
+
+
+.cv-item h3 {
+
+    font-family: var(--sans);
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 0;
+}
+
+
+.cv-item p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   21. FOOTER
+   ========================================================= */
+
+footer {
+
+    background:
+        var(--ocean-950);
+
+    color: white;
+
+    padding:
+        75px
+        40px
+        25px;
+}
+
+
+.footer-content {
+
+    width: min(
+        1180px,
+        100%
+    );
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.footer-content h3 {
+
+    font-family: var(--sans);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.footer-content p {
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: 13px;
+}
+
+
+.footer-social {
+
+    display: flex;
+
+    gap: 9px;
+}
+
+
+.footer-social a {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(255,255,255,.20);
+
+    border-radius: 50%;
+
+    color:
+        rgba(255,255,255,.70);
+
+    font-size: 10px;
+
+    transition: var(--transition);
+}
+
+
+.footer-social a:hover {
+
+    background: var(--teal);
+
+    border-color: var(--teal);
+
+    color: white;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.copyright {
+
+    width: min(
+        1180px,
+        100%
+    );
+
+    margin:
+        50px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.10);
+
+    color:
+        rgba(255,255,255,.35);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   22. IMAGE HOVER
+   ========================================================= */
+
+.intro-image,
+.field-image,
+.gallery-grid img {
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   23. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .nav-container {
+
+        width:
+            calc(100% - 50px);
+    }
+
+
+    .main-nav {
+
+        gap: 16px;
+    }
+
+
+    .research-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .intro-section {
+
+        gap: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   24. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .site-header {
+
+        position: relative;
+
+        background:
+            var(--ocean-950);
+    }
+
+
+    .nav-container {
+
+        width: 100%;
+
+        padding:
+            20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .site-name {
+
+        font-size: 14px;
+    }
+
+
+    .main-nav {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 13px 18px;
+    }
+
+
+    .main-nav > a,
+    .dropdown > a {
+
+        padding: 5px 0;
+
+        font-size: 9px;
+    }
+
+
+    .main-nav > a::after,
+    .dropdown > a::after {
+
+        display: none;
+    }
+
+
+    .dropdown-menu {
+
+        display: none;
+    }
+
+
+    .hero {
+
+        min-height:
+            78vh;
+    }
+
+
+    .hero-content {
+
+        width:
+            calc(100% - 40px);
+
+        padding-bottom:
+            65px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                48px,
+                15vw,
+                75px
+            );
+    }
+
+
+    .hero-position {
+
+        font-size: 18px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .intro-section {
+
+        width:
+            calc(100% - 40px);
+
+        padding:
+            85px 0;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 50px;
+    }
+
+
+    .intro-image img {
+
+        height:
+            450px;
+    }
+
+
+    .research-home {
+
+        padding:
+            85px 20px;
+    }
+
+
+    .research-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .field-section {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .field-image {
+
+        min-height:
+            430px;
+    }
+
+
+    .field-content {
+
+        padding:
+            75px 30px;
+    }
+
+
+    .publication-home {
+
+        padding:
+            90px 25px;
+    }
+
+
+    .page-hero {
+
+        min-height:
+            48vh;
+
+        padding:
+            100px 25px 65px;
+    }
+
+
+    .gallery-section {
+
+        padding:
+            80px 20px;
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .gallery-grid img {
+
+        height:
+            300px;
+    }
+
+
+    .contact-section {
+
+        width:
+            calc(100% - 40px);
+
+        padding:
+            85px 0;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 60px;
+    }
+
+
+    .publications-section,
+    .cv-section {
+
+        width:
+            calc(100% - 40px);
+
+        padding:
+            80px 0;
+    }
+
+
+    .publication {
+
+        grid-template-columns:
+            45px 1fr;
+
+        gap: 20px;
+    }
+
+
+    .cv-item {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 8px;
+    }
+
+
+    .cv-section h2 {
+
+        font-size: 38px;
+
+        margin-top: 55px;
+    }
+
+
+    .footer-content {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   25. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .site-name {
+
+        font-size:
+            12px;
+
+        letter-spacing:
+            1.2px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            45px;
+    }
+
+
+    .hero-kicker {
+
+        letter-spacing:
+            2px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            43px;
+    }
+
+
+    .research-card {
+
+        min-height:
+            280px;
+    }
+
+
+    .field-content h2 {
+
+        font-size:
+            43px;
+    }
+
+}
+
+
+/* =========================================================
+   26. SUBTLE PAGE ANIMATION
+   ========================================================= */
+
+@keyframes pageReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+main {
+
+    animation:
+        pageReveal .7s ease both;
+}
+
+/* =========================================================
+   SELECTED PUBLICATIONS
+========================================================= */
+
+.page-hero {
+    min-height: 55vh;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 43, 53, 0.94),
+            rgba(3, 43, 53, 0.65)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 150px 40px 80px;
+
+    color: white;
+}
+
+
+.page-hero-content {
+    max-width: 1050px;
+    width: 100%;
+    margin: auto;
+}
+
+
+.page-hero h1 {
+    font-size: clamp(52px, 7vw, 90px);
+    line-height: 1;
+    margin: 15px 0 25px;
+}
+
+
+.page-hero p:last-child {
+    max-width: 650px;
+    color: #d4e8e9;
+    font-size: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   PUBLICATION AREA
+--------------------------------------------------------- */
+
+.selected-publications {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 30px 120px;
+}
+
+
+.publication-card {
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    background: white;
+
+    margin-bottom: 55px;
+
+    box-shadow:
+        0 20px 60px rgba(8, 48, 56, 0.10);
+
+    border: 1px solid #dcebea;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.publication-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 28px 70px rgba(8, 48, 56, 0.16);
+
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE
+--------------------------------------------------------- */
+
+.publication-image {
+
+    min-height: 520px;
+
+    background: #dceceb;
+
+    overflow: hidden;
+}
+
+
+.publication-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 520px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.publication-card:hover
+.publication-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* ---------------------------------------------------------
+   CONTENT
+--------------------------------------------------------- */
+
+.publication-content {
+
+    padding: 55px 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.publication-meta {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+
+    font-weight: 600;
+
+    color: #618084;
+
+}
+
+
+.publication-year {
+
+    color: #087f82;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.publication-content h2 {
+
+    font-size: 36px;
+
+    line-height: 1.18;
+
+    color: #143940;
+
+    margin-bottom: 22px;
+
+}
+
+
+.citation {
+
+    color: #64797d;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+
+}
+
+
+.citation strong {
+
+    color: #123e46;
+
+}
+
+
+/* ---------------------------------------------------------
+   RESEARCH HIGHLIGHT
+--------------------------------------------------------- */
+
+.research-highlight {
+
+    border-left: 3px solid #69b9b5;
+
+    background: #f1f8f7;
+
+    padding: 22px 25px;
+
+    margin: 5px 0 30px;
+
+}
+
+
+.research-highlight h3 {
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #087f82;
+
+    margin-bottom: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.research-highlight p {
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    color: #4f696d;
+
+}
+
+
+/* ---------------------------------------------------------
+   PAPER BUTTON
+--------------------------------------------------------- */
+
+.paper-button {
+
+    align-self: flex-start;
+
+    display: inline-block;
+
+    padding: 12px 21px;
+
+    border: 1px solid #0b7075;
+
+    color: #075f67;
+
+    font-size: 10px;
+
+    letter-spacing: 1.7px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+
+}
+
+
+.paper-button:hover {
+
+    background: #075f67;
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   SCIENTIFIC ASSESSMENT
+========================================================= */
+
+.assessment-section {
+
+    background: #e9f4f2;
+
+    padding: 110px 30px 130px;
+
+}
+
+
+.assessment-intro {
+
+    max-width: 850px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+}
+
+
+.assessment-intro h2 {
+
+    font-size: 55px;
+
+    line-height: 1.1;
+
+    margin: 15px 0 20px;
+
+}
+
+
+.assessment-intro > p:last-child {
+
+    color: #607579;
+
+    font-size: 17px;
+
+}
+
+
+/* ---------------------------------------------------------
+   WOA CARD
+--------------------------------------------------------- */
+
+.assessment-card {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 40% 60%;
+
+    background: #073d46;
+
+    color: white;
+
+    box-shadow:
+        0 25px 70px rgba(5, 55, 63, 0.20);
+
+}
+
+
+.assessment-image {
+
+    min-height: 650px;
+
+    background: #123f46;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.assessment-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 650px;
+
+    object-fit: cover;
+
+}
+
+
+.assessment-content {
+
+    padding: 65px 65px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.assessment-content .publication-meta {
+
+    color: #a6cacc;
+
+}
+
+
+.assessment-content .publication-year {
+
+    color: #8dd8d5;
+
+}
+
+
+.assessment-content h2 {
+
+    font-size: 45px;
+
+    line-height: 1.12;
+
+    margin-bottom: 20px;
+
+}
+
+
+.assessment-content > p {
+
+    color: #c7dcdc;
+
+    line-height: 1.75;
+
+}
+
+
+.assessment-role {
+
+    color: #8dd8d5 !important;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+.assessment-content
+.research-highlight {
+
+    background: rgba(255,255,255,0.08);
+
+    border-left-color: #8dd8d5;
+
+    margin-top: 25px;
+
+}
+
+
+.assessment-content
+.research-highlight h3 {
+
+    color: #8dd8d5;
+
+}
+
+
+.assessment-content
+.research-highlight p {
+
+    color: #d4e7e7;
+
+}
+
+
+.assessment-note {
+
+    font-size: 14px;
+
+    color: #a9c4c6 !important;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+
+    .page-hero {
+
+        min-height: 55vh;
+
+        padding:
+            110px
+            25px
+            60px;
+
+    }
+
+
+    .page-hero h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .selected-publications {
+
+        padding:
+            70px
+            20px
+            90px;
+
+    }
+
+
+    .publication-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .publication-image {
+
+        min-height: 350px;
+
+    }
+
+
+    .publication-image img {
+
+        min-height: 350px;
+
+    }
+
+
+    .publication-content {
+
+        padding:
+            40px 30px
+            45px;
+
+    }
+
+
+    .publication-content h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .assessment-section {
+
+        padding:
+            80px
+            20px
+            90px;
+
+    }
+
+
+    .assessment-intro h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .assessment-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .assessment-image {
+
+        min-height: 400px;
+
+    }
+
+
+    .assessment-image img {
+
+        min-height: 400px;
+
+    }
+
+
+    .assessment-content {
+
+        padding:
+            45px 30px
+            50px;
+
+    }
+
+
+    .assessment-content h2 {
+
+        font-size: 36px;
+
+    }
+
+}
