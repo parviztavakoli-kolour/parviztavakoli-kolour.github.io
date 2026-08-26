@@ -2260,7 +2260,7 @@ main {
 
     min-height: 520px;
 
-    object-fit: cover;
+    object-fit: contain;
 
     transition:
         transform 0.6s ease;
