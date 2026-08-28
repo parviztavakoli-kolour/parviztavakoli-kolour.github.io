@@ -1,7 +1,6 @@
 /* =========================================================
    PARVIZ TAVAKOLI-KOLOUR
-   PERSONAL ACADEMIC WEBSITE
-   FINAL MAIN STYLESHEET
+   FINAL STABLE WEBSITE STYLE
    ========================================================= */
 
 
@@ -20,6 +19,10 @@ html {
 }
 
 body {
+
+    width: 100%;
+    min-height: 100%;
+
     margin: 0;
     padding: 0;
 
@@ -32,6 +35,7 @@ body {
         sans-serif;
 
     background: #f7f8f6;
+
     color: #182525;
 
     line-height: 1.7;
@@ -49,13 +53,20 @@ a {
     text-decoration: none;
 }
 
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
-
 button {
     font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.15;
+    color: #102c35;
+}
+
+p {
+    color: #687676;
 }
 
 
@@ -74,7 +85,6 @@ button {
     --sand: #e8dfcf;
 
     --cream: #f7f8f6;
-
     --white: #ffffff;
 
     --text: #182525;
@@ -88,92 +98,86 @@ button {
     --header-height: 78px;
 
     --shadow:
-        0 18px 50px rgba(10, 35, 40, 0.08);
+        0 16px 45px rgba(10, 35, 40, 0.08);
 }
 
 
 /* =========================================================
-   GLOBAL
+   COMMON CONTAINER
    ========================================================= */
 
 .container {
-    width: min(
-        var(--max-width),
-        calc(100% - 48px)
-    );
 
-    margin-left: auto;
-    margin-right: auto;
-}
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 48px)
+        );
 
-main {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+    max-width:
+        var(--max-width);
 
-section {
-    width: 100%;
-}
+    margin-left:
+        auto;
 
-h1,
-h2,
-h3,
-h4 {
-    color: var(--navy);
-    line-height: 1.15;
-}
-
-p {
-    color: var(--muted);
-}
-
-::selection {
-    background: var(--teal);
-    color: white;
+    margin-right:
+        auto;
 }
 
 
 /* =========================================================
-   SECTION LABEL
+   LABELS
    ========================================================= */
 
 .section-label {
-    margin-bottom: 14px;
 
-    color: var(--teal);
+    margin-bottom:
+        14px;
 
-    font-size: 0.74rem;
-    font-weight: 800;
+    color:
+        var(--teal);
 
-    letter-spacing: 0.18em;
+    font-size:
+        0.74rem;
 
-    text-transform: uppercase;
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.18em;
+
+    text-transform:
+        uppercase;
 }
 
-
-/* =========================================================
-   TEXT LINK
-   ========================================================= */
 
 .text-link {
 
-    display: inline-block;
+    display:
+        inline-block;
 
-    margin-top: 22px;
+    margin-top:
+        22px;
 
-    color: var(--teal);
+    color:
+        var(--teal);
 
-    font-size: 0.82rem;
-    font-weight: 800;
+    font-size:
+        0.82rem;
 
-    letter-spacing: 0.08em;
+    font-weight:
+        800;
 
-    transition: 0.25s ease;
+    letter-spacing:
+        0.08em;
+
+    transition:
+        transform 0.25s ease;
 }
 
 .text-link:hover {
-    transform: translateX(5px);
+    transform:
+        translateX(5px);
 }
 
 
@@ -183,23 +187,29 @@ p {
 
 .site-header {
 
-    position: sticky;
+    position:
+        sticky;
 
-    top: 0;
+    top:
+        0;
 
-    z-index: 1000;
+    z-index:
+        1000;
 
-    width: 100%;
+    width:
+        100%;
 
-    height: var(--header-height);
+    height:
+        var(--header-height);
 
     background:
-        rgba(255, 255, 255, 0.97);
+        rgba(255,255,255,0.97);
 
     border-bottom:
-        1px solid rgba(16, 44, 53, 0.08);
+        1px solid rgba(16,44,53,0.08);
 
-    backdrop-filter: blur(12px);
+    backdrop-filter:
+        blur(12px);
 }
 
 
@@ -211,94 +221,126 @@ p {
             calc(100% - 48px)
         );
 
-    height: 100%;
+    height:
+        100%;
 
     margin:
         0 auto;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
-    gap: 30px;
+    gap:
+        30px;
 }
 
 
 .site-name {
 
-    flex-shrink: 0;
+    flex-shrink:
+        0;
 
-    color: var(--navy);
+    color:
+        var(--navy);
 
-    font-size: 0.82rem;
+    font-size:
+        0.82rem;
 
-    font-weight: 900;
+    font-weight:
+        900;
 
-    letter-spacing: 0.08em;
+    letter-spacing:
+        0.08em;
 
-    white-space: nowrap;
+    white-space:
+        nowrap;
 }
 
 
 /* =========================================================
-   MAIN NAVIGATION
+   NAVIGATION
    ========================================================= */
 
 .main-nav {
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: flex-end;
+    justify-content:
+        flex-end;
 
-    gap: 28px;
+    gap:
+        26px;
 
-    min-width: 0;
+    min-width:
+        0;
 }
 
 
 .main-nav > a,
 .dropdown > a {
 
-    position: relative;
+    position:
+        relative;
 
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    color: var(--navy);
+    padding:
+        29px 0;
 
-    font-size: 0.72rem;
+    color:
+        var(--navy);
 
-    font-weight: 800;
+    font-size:
+        0.72rem;
 
-    letter-spacing: 0.1em;
+    font-weight:
+        800;
 
-    white-space: nowrap;
+    letter-spacing:
+        0.1em;
 
-    padding: 29px 0;
+    white-space:
+        nowrap;
 }
 
 
 .main-nav > a::after,
 .dropdown > a::after {
 
-    content: "";
+    content:
+        "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    left: 0;
+    left:
+        0;
 
-    bottom: 21px;
+    bottom:
+        21px;
 
-    width: 0;
+    width:
+        0;
 
-    height: 2px;
+    height:
+        2px;
 
-    background: var(--teal);
+    background:
+        var(--teal);
 
     transition:
         width 0.25s ease;
@@ -307,50 +349,58 @@ p {
 
 .main-nav > a:hover::after,
 .dropdown:hover > a::after {
+    width:
+        100%;
+}
 
-    width: 100%;
+
+.dropdown {
+    position:
+        relative;
 }
 
 
 .dropdown > a span {
 
-    margin-left: 4px;
+    margin-left:
+        4px;
 
-    font-size: 0.7rem;
-}
-
-
-/* =========================================================
-   DROPDOWN
-   ========================================================= */
-
-.dropdown {
-    position: relative;
+    font-size:
+        0.7rem;
 }
 
 
 .dropdown-menu {
 
-    position: absolute;
+    position:
+        absolute;
 
-    top: calc(100% - 4px);
+    top:
+        calc(100% - 4px);
 
-    left: 50%;
+    left:
+        50%;
 
-    min-width: 235px;
+    min-width:
+        235px;
 
-    padding: 10px 0;
+    padding:
+        10px 0;
 
-    background: white;
+    background:
+        white;
 
     border:
         1px solid var(--line);
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        var(--shadow);
 
-    opacity: 0;
+    opacity:
+        0;
 
-    visibility: hidden;
+    visibility:
+        hidden;
 
     transform:
         translate(-50%, 8px);
@@ -365,9 +415,11 @@ p {
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu {
 
-    opacity: 1;
+    opacity:
+        1;
 
-    visibility: visible;
+    visibility:
+        visible;
 
     transform:
         translate(-50%, 0);
@@ -376,20 +428,23 @@ p {
 
 .dropdown-menu a {
 
-    display: block;
+    display:
+        block;
 
-    padding: 11px 20px;
+    padding:
+        11px 20px;
 
-    color: var(--navy);
+    color:
+        var(--navy);
 
-    font-size: 0.75rem;
+    font-size:
+        0.75rem;
 
-    font-weight: 700;
+    font-weight:
+        700;
 
     transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        padding-left 0.2s ease;
+        0.2s ease;
 }
 
 
@@ -412,38 +467,82 @@ p {
 
 .hero {
 
-    position: relative;
+    position:
+        relative;
 
-    width: 100%;
+    width:
+        100%;
 
     min-height:
         calc(100vh - var(--header-height));
 
-    display: flex;
+    overflow:
+        hidden;
 
-    align-items: center;
+    display:
+        flex;
 
-    overflow: hidden;
+    align-items:
+        center;
 
     background:
+        var(--navy);
+}
 
+
+.hero-image {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    z-index:
+        0;
+}
+
+
+.hero-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
         linear-gradient(
             90deg,
-            rgba(5, 28, 35, 0.90) 0%,
-            rgba(5, 28, 35, 0.65) 48%,
-            rgba(5, 28, 35, 0.20) 100%
-        ),
+            rgba(5,28,35,0.92) 0%,
+            rgba(5,28,35,0.68) 48%,
+            rgba(5,28,35,0.18) 100%
+        );
 
-        url("../image/coral-reef-hero.jpg")
-        center / cover no-repeat;
+    z-index:
+        1;
 }
 
 
 .hero-content {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 2;
+    z-index:
+        2;
 
     width:
         min(
@@ -492,11 +591,11 @@ p {
     font-weight:
         800;
 
-    letter-spacing:
-        -0.045em;
-
     line-height:
         0.98;
+
+    letter-spacing:
+        -0.045em;
 }
 
 
@@ -598,12 +697,6 @@ p {
 }
 
 
-.button-light:hover {
-    background:
-        var(--teal-light);
-}
-
-
 .button-outline {
 
     border:
@@ -641,7 +734,7 @@ p {
 
 
 /* =========================================================
-   INTRODUCTION
+   ABOUT SECTION
    ========================================================= */
 
 .intro-section {
@@ -680,6 +773,9 @@ p {
 
     width:
         100%;
+
+    max-width:
+        520px;
 }
 
 
@@ -731,13 +827,15 @@ p {
     object-fit:
         cover;
 
+    object-position:
+        center;
+
     background:
         #e6ecea;
 }
 
 
 .intro-text {
-
     min-width:
         0;
 }
@@ -749,7 +847,7 @@ p {
         700px;
 
     font-size:
-        clamp(2.2rem, 4vw, 4rem);
+        clamp(2.2rem,4vw,4rem);
 
     letter-spacing:
         -0.035em;
@@ -811,7 +909,7 @@ p {
         white;
 
     font-size:
-        clamp(2.2rem, 4vw, 3.8rem);
+        clamp(2.2rem,4vw,3.8rem);
 }
 
 
@@ -843,7 +941,7 @@ p {
         grid;
 
     grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        repeat(4,minmax(0,1fr));
 }
 
 
@@ -868,7 +966,6 @@ p {
 
 
 .research-card:last-child {
-
     border-right:
         1px solid rgba(255,255,255,0.12);
 }
@@ -927,7 +1024,7 @@ p {
 
 
 /* =========================================================
-   FIELD SECTION
+   FIELDWORK
    ========================================================= */
 
 .field-section {
@@ -954,15 +1051,24 @@ p {
     min-height:
         540px;
 
-    background:
+    overflow:
+        hidden;
+}
 
-        linear-gradient(
-            rgba(10,40,45,0.18),
-            rgba(10,40,45,0.18)
-        ),
 
-        url("../image/coralreef.JPG")
-        center / cover no-repeat;
+.field-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
 }
 
 
@@ -978,7 +1084,7 @@ p {
         center;
 
     padding:
-        70px clamp(40px, 7vw, 100px);
+        70px clamp(40px,7vw,100px);
 }
 
 
@@ -988,7 +1094,7 @@ p {
         650px;
 
     font-size:
-        clamp(2.3rem, 4vw, 4rem);
+        clamp(2.3rem,4vw,4rem);
 }
 
 
@@ -1028,7 +1134,7 @@ p {
         750px;
 
     font-size:
-        clamp(2.3rem, 4vw, 4rem);
+        clamp(2.3rem,4vw,4rem);
 }
 
 
@@ -1071,7 +1177,7 @@ p {
         white;
 
     font-size:
-        clamp(3rem, 6vw, 5.5rem);
+        clamp(3rem,6vw,5.5rem);
 
     letter-spacing:
         -0.04em;
@@ -1116,7 +1222,7 @@ p {
         20px 0;
 
     background:
-        rgba(247,248,246,0.96);
+        rgba(247,248,246,0.97);
 
     border-bottom:
         1px solid var(--line);
@@ -1145,9 +1251,6 @@ p {
 
     justify-content:
         flex-start;
-
-    gap:
-        15px;
 }
 
 
@@ -1166,20 +1269,17 @@ p {
 
 .filter-button {
 
+    padding:
+        8px 14px;
+
     border:
         1px solid var(--line);
 
     background:
         white;
 
-    padding:
-        8px 14px;
-
     color:
         var(--navy);
-
-    font:
-        inherit;
 
     font-size:
         0.72rem;
@@ -1213,7 +1313,7 @@ p {
 
 
 /* =========================================================
-   PUBLICATIONS MAIN
+   PUBLICATIONS PAGE
    ========================================================= */
 
 .publications-section {
@@ -1245,7 +1345,7 @@ p {
 .publication-section-heading h2 {
 
     font-size:
-        clamp(2.2rem, 4vw, 3.5rem);
+        clamp(2.2rem,4vw,3.5rem);
 
     letter-spacing:
         -0.03em;
@@ -1272,7 +1372,7 @@ p {
         grid;
 
     grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(2,minmax(0,1fr));
 
     gap:
         28px;
@@ -1336,16 +1436,8 @@ p {
     object-fit:
         cover;
 
-    transition:
-        transform 0.4s ease;
-}
-
-
-.selected-publication-card:hover
-.selected-publication-image img {
-
-    transform:
-        scale(1.04);
+    object-position:
+        center;
 }
 
 
@@ -1416,16 +1508,25 @@ p {
 }
 
 
+.selected-description {
+
+    margin-top:
+        16px;
+
+    font-size:
+        0.88rem;
+
+    line-height:
+        1.65;
+
+    color:
+        var(--muted);
+}
+
+
 /* =========================================================
    FULL PUBLICATION LIST
    ========================================================= */
-
-.full-publication-list {
-
-    width:
-        100%;
-}
-
 
 .publication-year {
 
@@ -1479,19 +1580,18 @@ p {
 
 
 /* =========================================================
-   PUBLICATION ITEM
+   THE IMPORTANT PART:
+   ONE ARTICLE = ONE CARD
+   IMAGE LEFT / TEXT RIGHT
    ========================================================= */
 
 .publication-item {
-
-    position:
-        relative;
 
     width:
         100%;
 
     margin-bottom:
-        12px;
+        16px;
 
     background:
         white;
@@ -1499,10 +1599,13 @@ p {
     border:
         1px solid var(--line);
 
+    overflow:
+        hidden;
+
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
-        border 0.2s ease;
+        border-color 0.2s ease;
 }
 
 
@@ -1515,14 +1618,7 @@ p {
         #c9d8d5;
 
     box-shadow:
-        0 12px 35px rgba(10,35,40,0.06);
-}
-
-
-.publication-item.first-author {
-
-    border-left:
-        4px solid var(--teal);
+        0 12px 35px rgba(10,35,40,0.07);
 }
 
 
@@ -1532,26 +1628,33 @@ p {
         grid;
 
     grid-template-columns:
-        190px minmax(0, 1fr);
+        250px minmax(0,1fr);
+
+    align-items:
+        stretch;
 
     min-width:
         0;
 }
 
 
+/* =========================================================
+   ARTICLE IMAGE
+   ========================================================= */
+
 .publication-thumb {
 
     width:
-        190px;
+        250px;
 
     min-height:
-        170px;
-
-    background:
-        #e6ecea;
+        190px;
 
     overflow:
         hidden;
+
+    background:
+        #e6ecea;
 }
 
 
@@ -1563,13 +1666,20 @@ p {
     height:
         100%;
 
-    min-height:
-        170px;
+    display:
+        block;
 
     object-fit:
         cover;
+
+    object-position:
+        center;
 }
 
+
+/* =========================================================
+   ARTICLE INFORMATION
+   ========================================================= */
 
 .publication-content {
 
@@ -1577,7 +1687,7 @@ p {
         0;
 
     padding:
-        27px 30px;
+        26px 30px;
 }
 
 
@@ -1589,25 +1699,27 @@ p {
     flex-wrap:
         wrap;
 
-    align-items:
-        center;
-
     gap:
         8px;
 
     margin-bottom:
-        9px;
+        10px;
 }
 
 
-.pub-type,
-.pub-first-author {
+.pub-type {
 
     display:
         inline-block;
 
     padding:
         4px 8px;
+
+    background:
+        var(--teal-light);
+
+    color:
+        var(--teal);
 
     font-size:
         0.62rem;
@@ -1623,30 +1735,10 @@ p {
 }
 
 
-.pub-type {
-
-    background:
-        var(--teal-light);
-
-    color:
-        var(--teal);
-}
-
-
-.pub-first-author {
-
-    background:
-        #edf0ed;
-
-    color:
-        #53625f;
-}
-
-
 .publication-title {
 
-    display:
-        block;
+    margin:
+        0;
 
     color:
         var(--navy);
@@ -1657,35 +1749,32 @@ p {
         serif;
 
     font-size:
-        1.22rem;
+        1.25rem;
 
     font-weight:
         700;
 
     line-height:
-        1.4;
+        1.38;
 
     overflow-wrap:
         anywhere;
 }
 
 
-.publication-title:hover {
-    color:
-        var(--teal);
-}
-
-
 .publication-authors {
 
     margin-top:
-        8px;
+        9px;
 
     color:
         #4d5d5d;
 
     font-size:
-        0.91rem;
+        0.9rem;
+
+    line-height:
+        1.55;
 
     overflow-wrap:
         anywhere;
@@ -1705,29 +1794,32 @@ p {
 }
 
 
-.publication-journal em {
-    color:
-        var(--navy);
-}
+.publication-description {
 
-
-.pub-actions {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        12px;
+    max-width:
+        850px;
 
     margin-top:
         14px;
+
+    color:
+        #667473;
+
+    font-size:
+        0.88rem;
+
+    line-height:
+        1.65;
 }
 
 
-.pub-link {
+.publication-link {
+
+    display:
+        inline-block;
+
+    margin-top:
+        16px;
 
     color:
         var(--teal);
@@ -1739,14 +1831,14 @@ p {
         900;
 
     letter-spacing:
-        0.06em;
+        0.07em;
 
     text-transform:
         uppercase;
 }
 
 
-.pub-link:hover {
+.publication-link:hover {
     text-decoration:
         underline;
 }
@@ -1781,7 +1873,7 @@ p {
         white;
 
     font-size:
-        clamp(2.2rem, 4vw, 3.6rem);
+        clamp(2.2rem,4vw,3.6rem);
 }
 
 
@@ -1804,7 +1896,7 @@ p {
         grid;
 
     grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        repeat(4,minmax(0,1fr));
 
     gap:
         1px;
@@ -1870,9 +1962,6 @@ footer {
 
     background:
         var(--navy-dark);
-
-    color:
-        white;
 }
 
 
@@ -1971,9 +2060,6 @@ footer {
 
     font-weight:
         900;
-
-    transition:
-        0.2s ease;
 }
 
 
@@ -2023,41 +2109,35 @@ footer {
             17px;
     }
 
-    .nav-container {
-        width:
-            calc(100% - 32px);
-    }
 
     .research-grid {
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            repeat(2,minmax(0,1fr));
     }
+
 
     .research-card:nth-child(2) {
         border-right:
             1px solid rgba(255,255,255,0.12);
     }
 
-    .research-card:nth-child(n + 3) {
+
+    .research-card:nth-child(n+3) {
         border-top:
             0;
     }
+
 
     .selected-publication-grid {
         grid-template-columns:
             1fr 1fr;
     }
 
-    .assessment-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
 }
 
 
 /* =========================================================
-   MOBILE / SMALL TABLET
+   MOBILE
    ========================================================= */
 
 @media (max-width: 780px) {
@@ -2106,13 +2186,12 @@ footer {
             wrap;
 
         gap:
-            12px 18px;
+            11px 17px;
     }
 
 
     .main-nav > a,
     .dropdown > a {
-
         padding:
             5px 0;
     }
@@ -2120,32 +2199,14 @@ footer {
 
     .main-nav > a::after,
     .dropdown > a::after {
-
         bottom:
             0;
     }
 
 
-    .dropdown-menu {
-
-        position:
-            absolute;
-
-        top:
-            calc(100% + 5px);
-
-        left:
-            50%;
-    }
-
-
     .hero {
-
         min-height:
             680px;
-
-        align-items:
-            center;
     }
 
 
@@ -2160,9 +2221,8 @@ footer {
 
 
     .hero h1 {
-
         font-size:
-            clamp(3rem, 14vw, 5.2rem);
+            clamp(3rem,14vw,5.2rem);
     }
 
 
@@ -2183,14 +2243,12 @@ footer {
 
 
     .intro-image {
-
         max-width:
-            540px;
+            520px;
     }
 
 
     .research-home {
-
         padding:
             75px 0;
     }
@@ -2223,28 +2281,24 @@ footer {
 
 
     .research-card:last-child {
-
         border-bottom:
             1px solid rgba(255,255,255,0.12);
     }
 
 
     .field-section {
-
         grid-template-columns:
             1fr;
     }
 
 
     .field-image {
-
         min-height:
             380px;
     }
 
 
     .field-content {
-
         padding:
             65px 24px;
     }
@@ -2261,14 +2315,12 @@ footer {
 
 
     .page-hero {
-
         padding:
             75px 0 65px;
     }
 
 
     .page-hero .container {
-
         width:
             calc(100% - 32px);
     }
@@ -2308,14 +2360,14 @@ footer {
 
 
     .selected-publication-grid {
-
         grid-template-columns:
             1fr;
     }
 
 
-    .publication-layout {
+    /* PHOTO ABOVE / INFO BELOW ONLY ON MOBILE */
 
+    .publication-layout {
         grid-template-columns:
             1fr;
     }
@@ -2326,23 +2378,31 @@ footer {
         width:
             100%;
 
-        min-height:
-            220px;
+        height:
+            auto;
 
-        max-height:
-            280px;
+        min-height:
+            0;
+
+        aspect-ratio:
+            16 / 10;
     }
 
 
     .publication-thumb img {
 
-        min-height:
-            220px;
+        width:
+            100%;
+
+        height:
+            100%;
+
+        object-fit:
+            cover;
     }
 
 
     .publication-content {
-
         padding:
             24px;
     }
@@ -2359,9 +2419,8 @@ footer {
 
 
     .assessment-grid {
-
         grid-template-columns:
-            1fr;
+            1fr 1fr;
     }
 
 
@@ -2376,7 +2435,6 @@ footer {
 
 
     .copyright {
-
         width:
             calc(100% - 32px);
     }
@@ -2392,20 +2450,18 @@ footer {
 
     .main-nav {
         gap:
-            10px 14px;
+            9px 13px;
     }
 
 
     .main-nav > a,
     .dropdown > a {
-
         font-size:
-            0.65rem;
+            0.64rem;
     }
 
 
     .hero h1 {
-
         font-size:
             3.1rem;
     }
@@ -2425,65 +2481,26 @@ footer {
 
 
     .button {
-
         width:
             100%;
     }
 
 
-    .intro-section {
-
-        width:
-            calc(100% - 32px);
-    }
-
-
-    .publication-section-heading h2 {
-
-        font-size:
-            2.2rem;
-    }
-
-
-    .publication-year > h2 {
-
-        font-size:
-            1.5rem;
-    }
-
-
     .publication-title {
-
         font-size:
             1.08rem;
     }
 
 
-    .publication-thumb {
-
-        min-height:
-            190px;
-    }
-
-
-    .publication-thumb img {
-
-        min-height:
-            190px;
-    }
-
-
-    .selected-publication-body {
-
+    .publication-content {
         padding:
-            22px;
+            20px;
     }
 
 
-    .assessment-section h2 {
-
-        font-size:
-            2.2rem;
+    .assessment-grid {
+        grid-template-columns:
+            1fr;
     }
 
 }
