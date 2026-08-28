@@ -256,7 +256,7 @@ p {
             rgba(5, 28, 35, 0.62) 48%,
             rgba(5, 28, 35, 0.18) 100%
         ),
-        url("../images/coral-background.jpg") center / cover no-repeat;
+        url("../image/coral-background.jpg") center / cover no-repeat;
 
     color: white;
 }
@@ -533,7 +533,7 @@ p {
             rgba(10, 40, 45, 0.18),
             rgba(10, 40, 45, 0.18)
         ),
-        url("../images/fieldwork.jpg") center / cover no-repeat;
+        url("../image/fieldwork.jpg") center / cover no-repeat;
 }
 
 .field-content {
