@@ -1,204 +1,1519 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Publications | Parviz Tavakoli-Kolour</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="css/style.css">
+    <title>
+        Publications | Parviz Tavakoli-Kolour
+    </title>
+
+    <meta
+        name="description"
+        content="Research publications by Parviz Tavakoli-Kolour."
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
+
 
 <body>
 
-<header class="site-header">
-    <div class="container nav-container">
 
-        <a href="index.html" class="site-name">
-            Parviz Tavakoli-Kolour
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="nav-container">
+
+        <a
+            href="index.html"
+            class="site-name"
+        >
+            PARVIZ TAVAKOLI-KOLOUR
         </a>
 
+
         <nav class="main-nav">
-            <a href="index.html">Home</a>
 
-            <div class="nav-dropdown">
-                <a href="about.html">About</a>
+            <a href="index.html">
+                HOME
+            </a>
+
+
+            <div class="dropdown">
+
+                <a href="about.html">
+                    ABOUT <span>⌄</span>
+                </a>
+
                 <div class="dropdown-menu">
-                    <a href="about.html#biography">Biography</a>
-                    <a href="about.html#experience">Academic Experience</a>
-                    <a href="about.html#education">Education</a>
+
+                    <a href="about.html#biography">
+                        Biography
+                    </a>
+
+                    <a href="about.html#education">
+                        Education
+                    </a>
+
+                    <a href="about.html#experience">
+                        Academic Experience
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="nav-dropdown">
-                <a href="research.html">Research</a>
+
+            <div class="dropdown">
+
+                <a href="research.html">
+                    RESEARCH <span>⌄</span>
+                </a>
+
                 <div class="dropdown-menu">
-                    <a href="research.html#coral-thermal">Coral Thermal Biology</a>
-                    <a href="research.html#mesophotic">Mesophotic Reefs</a>
-                    <a href="research.html#persian-gulf">Persian Gulf</a>
-                    <a href="research.html#disease">Coral Diseases</a>
+
+                    <a href="research.html#coral-ecology">
+                        Coral Reef Ecology
+                    </a>
+
+                    <a href="research.html#thermal">
+                        Coral Physiology & Thermal Stress
+                    </a>
+
+                    <a href="research.html#depth">
+                        Depth & Mesophotic Reefs
+                    </a>
+
+                    <a href="research.html#disease">
+                        Coral Diseases & Reef Health
+                    </a>
+
+                    <a href="research.html#field">
+                        Field & Experimental Research
+                    </a>
+
                 </div>
+
             </div>
 
-            <a href="publications.html" class="active">Publications</a>
-            <a href="cv.html">CV</a>
-            <a href="contact.html">Contact</a>
+
+            <div class="dropdown">
+
+                <a href="publications.html">
+                    PUBLICATIONS <span>⌄</span>
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="#selected">
+                        Selected Publications
+                    </a>
+
+                    <a href="#full-list">
+                        Full Publication List
+                    </a>
+
+                    <a href="#assessment">
+                        Scientific Assessment
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+
+            <div class="dropdown">
+
+                <a href="gallery.html">
+                    GALLERY <span>⌄</span>
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="gallery.html#persian-gulf">
+                        Persian Gulf
+                    </a>
+
+                    <a href="gallery.html#okinawa">
+                        Okinawa
+                    </a>
+
+                    <a href="gallery.html#indonesia">
+                        Indonesia
+                    </a>
+
+                    <a href="gallery.html#taiwan">
+                        Taiwan
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<main>
+<!-- =========================================================
+     PAGE HERO
+     ========================================================= -->
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-        <div class="container">
-            <p class="section-label">RESEARCH OUTPUT</p>
-            <h1>Publications</h1>
-            <p class="page-intro">
-                Research on coral reef ecology, thermal stress, acclimation,
-                mesophotic ecosystems, coral diseases, and marine biodiversity.
-            </p>
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            SCIENTIFIC OUTPUT
+        </p>
+
+        <h1>
+            Publications
+        </h1>
+
+        <p>
+            Research on coral thermal stress, environmental memory,
+            acclimation, mesophotic reefs, coral diseases and reef
+            resilience.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PUBLICATION CONTROLS
+     ========================================================= -->
+
+<section class="publication-controls">
+
+    <div class="publication-controls-inner">
+
+        <div class="publication-filter">
+
+            <button
+                class="filter-button active"
+                data-filter="all"
+                type="button"
+            >
+                ALL
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="thermal"
+                type="button"
+            >
+                THERMAL STRESS
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="depth"
+                type="button"
+            >
+                DEPTH
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="disease"
+                type="button"
+            >
+                DISEASE
+            </button>
+
+            <button
+                class="filter-button"
+                data-filter="ecology"
+                type="button"
+            >
+                ECOLOGY
+            </button>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
 
 
-    <!-- SELECTED PUBLICATIONS -->
-    <section class="selected-publications section">
-        <div class="container">
+<!-- =========================================================
+     PUBLICATIONS
+     ========================================================= -->
 
-            <div class="section-heading">
-                <p class="section-label">FEATURED RESEARCH</p>
-                <h2>Selected Publications</h2>
-                <p>
-                    A selection of studies highlighting my research on coral
-                    resilience, thermal stress, acclimation and reef refugia.
-                </p>
-            </div>
+<main class="publications-section">
 
 
-            <!-- SELECTED 1 -->
-            <article class="selected-publication-card">
+    <!-- =====================================================
+         SELECTED
+         ===================================================== -->
 
-                <div class="selected-number">01</div>
+    <section id="selected">
 
-                <div class="publication-image">
+        <div class="publication-section-heading">
+
+            <p class="section-label">
+                SELECTED WORK
+            </p>
+
+            <h2>
+                Research highlights
+            </h2>
+
+            <p>
+                A selection of publications representing my research
+                trajectory from coral thermal history and environmental
+                memory to depth acclimation and reef health.
+            </p>
+
+        </div>
+
+
+        <div class="selected-publication-grid">
+
+
+            <!-- 2024 MESOPHOTIC -->
+
+            <article
+                class="selected-publication-card"
+                data-category="depth thermal"
+            >
+
+                <div class="selected-publication-image">
+
                     <img
-                        src="image/pub-mesophotic-heat.jpg"
-                        alt="Coral thermal tolerance at mesophotic depths">
+                        src="image/pub-mesophotic-heat-tolerance.jpg"
+                        alt="Shallow corals acclimating to mesophotic depths"
+                    >
+
                 </div>
 
-                <div class="publication-content">
+                <div class="selected-publication-body">
 
-                    <span class="publication-year">2024</span>
+                    <span class="pub-year">
+                        2024
+                    </span>
 
                     <h3>
-                        Shallow corals acclimate to mesophotic depths while
-                        maintaining their heat tolerance against ongoing
-                        climate change
+                        Shallow corals acclimate to mesophotic depths
+                        while maintaining their heat tolerance against
+                        ongoing climate change
                     </h3>
 
-                    <p class="authors">
-                        <strong>Tavakoli-Kolour P</strong>, Sinniger F,
-                        Morita M, Hazraty-Kari S, Nakamura T, Harii S
+                    <p class="selected-authors">
+                        Tavakoli-Kolour, P., Sinniger, F., Morita, M.,
+                        Hazraty-Kari, S., Nakamura, T., & Harii, S.
                     </p>
 
-                    <p class="journal">
-                        <em>Marine Pollution Bulletin</em>, 209, 117277
-                    </p>
-
-                    <p class="publication-highlight">
-                        <strong>Research highlight</strong><br>
-                        Shallow corals transplanted to 40 m depth retained
-                        their thermal tolerance and developed higher thermal
-                        thresholds. The study demonstrates how mesophotic
-                        environments can act as potential refugia for shallow
-                        corals under ocean warming.
+                    <p class="selected-journal">
+                        <em>Marine Pollution Bulletin</em>, 209, 117277.
                     </p>
 
                     <a
                         href="https://doi.org/10.1016/j.marpolbul.2024.117277"
                         target="_blank"
-                        class="publication-link">
-                        View publication →
+                        rel="noopener"
+                        class="pub-link"
+                    >
+                        DOI →
                     </a>
 
                 </div>
+
             </article>
 
 
-            <!-- SELECTED 2 -->
-            <article class="selected-publication-card">
+            <!-- 2024 CONSECUTIVE -->
 
-                <div class="selected-number">02</div>
+            <article
+                class="selected-publication-card"
+                data-category="thermal"
+            >
 
-                <div class="publication-image">
+                <div class="selected-publication-image">
+
                     <img
-                        src="image/pub-consecutive-adult.jpg"
-                        alt="Acropora tenuis consecutive thermal stress">
+                        src="image/pub-acropora-consecutive-stress.jpg"
+                        alt="Acropora tenuis under consecutive thermal stress"
+                    >
+
                 </div>
 
-                <div class="publication-content">
+                <div class="selected-publication-body">
 
-                    <span class="publication-year">2024</span>
+                    <span class="pub-year">
+                        2024
+                    </span>
 
                     <h3>
-                        Susceptibility of <em>Acropora tenuis</em> to
-                        consecutive thermal stress
+                        Susceptibility of Acropora tenuis to consecutive
+                        thermal stress
                     </h3>
 
-                    <p class="authors">
-                        Hazraty-Kari S, <strong>Tavakoli-Kolour P</strong>,
-                        Nakamura T, Morita M
+                    <p class="selected-authors">
+                        Hazraty-Kari, S., Tavakoli-Kolour, P.,
+                        Nakamura, T., & Morita, M.
                     </p>
 
-                    <p class="journal">
-                        <em>Coral Reefs</em>, 43, 4
-                    </p>
-
-                    <p class="publication-highlight">
-                        <strong>Research highlight</strong><br>
-                        Repeated bleaching-level heat stress progressively
-                        reduced coral survival, photosynthetic efficiency,
-                        and symbiotic algal density. The results show that
-                        consecutive heatwaves can progressively increase
-                        coral susceptibility rather than producing unlimited
-                        acclimation.
+                    <p class="selected-journal">
+                        <em>Coral Reefs</em>, 43, 1097–1107.
                     </p>
 
                     <a
                         href="https://doi.org/10.1007/s00338-024-02530-8"
                         target="_blank"
-                        class="publication-link">
-                        View publication →
+                        rel="noopener"
+                        class="pub-link"
+                    >
+                        DOI →
                     </a>
 
                 </div>
+
             </article>
 
 
-            <!-- SELECTED 3 -->
-            <article class="selected-publication-card">
+            <!-- 2023 DEPTH -->
 
-                <div class="selected-number">03</div>
+            <article
+                class="selected-publication-card"
+                data-category="depth"
+            >
 
-                <div class="publication-image">
+                <div class="selected-publication-image">
+
                     <img
-                        src="image/pub-acropora-resilience.jpg"
-                        alt="Acropora tenuis thermal resilience">
+                        src="image/pub-depth-plasticity.jpg"
+                        alt="Coral plasticity across a depth gradient"
+                    >
+
                 </div>
 
-                <div class="publication-content">
+                <div class="selected-publication-body">
 
-                    <span class="publication-year">2022</span>
+                    <span class="pub-year">
+                        2023
+                    </span>
 
                     <h3>
-                        Adaptations by the coral <em>Acropora tenuis</em>
-                        confer resilience to future thermal stress
+                        Plasticity of shallow reef corals across a
+                        depth gradient
                     </h3>
 
-                    <p class="authors">
-                        Hazraty-Kari S, <strong>Tavakoli-Kolour P</strong>,
-                        Kitanobo S, Nakamura T, Morita M
-                    </
+                    <p class="selected-authors">
+                        Tavakoli-Kolour, P., Sinniger, F., Morita, M.,
+                        Hazraty-Kari, S., Nakamura, T., & Harii, S.
+                    </p>
+
+                    <p class="selected-journal">
+                        <em>Marine Pollution Bulletin</em>, 197, 115792.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 2023 THERMAL THRESHOLDS -->
+
+            <article
+                class="selected-publication-card"
+                data-category="depth thermal"
+            >
+
+                <div class="selected-publication-image">
+
+                    <img
+                        src="image/pub-thermal-threshold.jpg"
+                        alt="Coral thermal stress thresholds across depths"
+                    >
+
+                </div>
+
+                <div class="selected-publication-body">
+
+                    <span class="pub-year">
+                        2023
+                    </span>
+
+                    <h3>
+                        Variability in thermal stress thresholds of
+                        corals across depths
+                    </h3>
+
+                    <p class="selected-authors">
+                        Tavakoli-Kolour, P., Sinniger, F., Morita, M.,
+                        Nakamura, T., & Harii, S.
+                    </p>
+
+                    <p class="selected-journal">
+                        <em>Frontiers in Marine Science</em>, 10.
+                    </p>
+
+                    <a
+                        href="https://doi.org/10.3389/fmars.2023.1210662"
+                        target="_blank"
+                        rel="noopener"
+                        class="pub-link"
+                    >
+                        DOI →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FULL LIST
+         ===================================================== -->
+
+    <section
+        id="full-list"
+        class="full-publication-list"
+    >
+
+        <div class="publication-section-heading">
+
+            <p class="section-label">
+                PUBLICATIONS
+            </p>
+
+            <h2>
+                Full publication list
+            </h2>
+
+        </div>
+
+
+        <!-- 2025 -->
+
+        <div class="publication-year">
+
+            <h2>
+                2025
+            </h2>
+
+
+            <article
+                class="publication-item"
+                data-category="disease"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-persian-gulf-disease.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.3390/d17100732"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Can Shading Drive the Transition from Black
+                            Band Disease to a Cyanobacterial Patch-like
+                            Stage in Montipora Corals?
+                        </a>
+
+                        <p class="publication-authors">
+                            Das, R. R., Tavakoli-Kolour, P.,
+                            Tang, S.-L., & Reimer, J. D.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Diversity</em>, 17, 732.
+                        </p>
+
+                        <div class="pub-actions">
+
+                            <a
+                                class="pub-link"
+                                href="https://doi.org/10.3390/d17100732"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                DOI →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- 2024 -->
+
+        <div class="publication-year">
+
+            <h2>
+                2024
+            </h2>
+
+
+            <article
+                class="publication-item first-author"
+                data-category="depth thermal"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-mesophotic-heat-tolerance.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                            <span class="pub-first-author">
+                                First Author
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.1016/j.marpolbul.2024.117277"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Shallow corals acclimate to mesophotic depths
+                            while maintaining their heat tolerance against
+                            ongoing climate change
+                        </a>
+
+                        <p class="publication-authors">
+                            Tavakoli-Kolour, P., Sinniger, F., Morita, M.,
+                            Hazraty-Kari, S., Nakamura, T., & Harii, S.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Marine Pollution Bulletin</em>, 209, 117277.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="publication-item"
+                data-category="thermal"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-acropora-consecutive-stress.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.1007/s00338-024-02530-8"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Susceptibility of Acropora tenuis to
+                            consecutive thermal stress
+                        </a>
+
+                        <p class="publication-authors">
+                            Hazraty-Kari, S., Tavakoli-Kolour, P.,
+                            Nakamura, T., & Morita, M.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Coral Reefs</em>, 43, 1097–1107.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- 2023 -->
+
+        <div class="publication-year">
+
+            <h2>
+                2023
+            </h2>
+
+
+            <article
+                class="publication-item first-author"
+                data-category="depth"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-depth-plasticity.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                            <span class="pub-first-author">
+                                First Author
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.1016/j.marpolbul.2023.115792"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Plasticity of shallow reef corals across
+                            a depth gradient
+                        </a>
+
+                        <p class="publication-authors">
+                            Tavakoli-Kolour, P., Sinniger, F., Morita, M.,
+                            Hazraty-Kari, S., Nakamura, T., & Harii, S.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Marine Pollution Bulletin</em>, 197, 115792.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="publication-item first-author"
+                data-category="depth thermal"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-thermal-threshold.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                            <span class="pub-first-author">
+                                First Author
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.3389/fmars.2023.1210662"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Variability in thermal stress thresholds
+                            of corals across depths
+                        </a>
+
+                        <p class="publication-authors">
+                            Tavakoli-Kolour, P., Sinniger, F., Morita, M.,
+                            Nakamura, T., & Harii, S.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Frontiers in Marine Science</em>, 10.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="publication-item"
+                data-category="thermal"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-larvae-thermal-stress.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.1016/j.marpolbul.2023.115060"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Response of resistant larvae of the coral
+                            Acropora tenuis to future thermal stress
+                        </a>
+
+                        <p class="publication-authors">
+                            Hazraty-Kari, S., Morita, M.,
+                            Tavakoli-Kolour, P., & Harii, S.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Marine Pollution Bulletin</em>, 192, 115060.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="publication-item"
+                data-category="thermal"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-juvenile-thermal-stress.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.1016/j.scitotenv.2022.161227"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Reactions of coral juveniles to three years
+                            consecutive thermal stress
+                        </a>
+
+                        <p class="publication-authors">
+                            Hazraty-Kari, S., Morita, M.,
+                            Tavakoli-Kolour, P., Nakamura, T., & Harii, S.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Science of the Total Environment</em>,
+                            863, 161227.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- 2022 -->
+
+        <div class="publication-year">
+
+            <h2>
+                2022
+            </h2>
+
+
+            <article
+                class="publication-item"
+                data-category="thermal"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-acropora-resilience.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.1038/s42003-022-04309-5"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Adaptations by the coral Acropora tenuis
+                            confer resilience to future thermal stress
+                        </a>
+
+                        <p class="publication-authors">
+                            Hazraty-Kari, S., Tavakoli-Kolour, P.,
+                            Kitanobo, S., Nakamura, T., & Morita, M.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Communications Biology</em>, 5, 1371.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="publication-item"
+                data-category="disease"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-growth-anomalies.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.3390/d14010032"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Four-Year Field Survey of Black Band Disease
+                            and Skeletal Growth Anomalies in Encrusting
+                            Montipora spp. Corals around Sesoko Island,
+                            Okinawa
+                        </a>
+
+                        <p class="publication-authors">
+                            Das, R. R., Wada, H., Masucci, G. D.,
+                            Singh, T., Tavakoli-Kolour, P., Wada, N.,
+                            et al.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Diversity</em>, 14, 32.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="publication-item"
+                data-category="ecology"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-persian-gulf-disease.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.7717/peerj.14179"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Genetic species identification and population
+                            structure of grouper Epinephelus coioides
+                            collected from fish markets along the Persian
+                            Gulf and the Oman Sea
+                        </a>
+
+                        <p class="publication-authors">
+                            Tavakoli-Kolour, P., Farhadi, A., Ajdari, A.,
+                            Bagheri, D., Hazraty-Kari, S., Ghasemi, A.,
+                            & Vazirzadeh, A.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>PeerJ</em>, 10, e14179.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- 2021 -->
+
+        <div class="publication-year">
+
+            <h2>
+                2021
+            </h2>
+
+
+            <article
+                class="publication-item"
+                data-category="disease ecology"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/pub-persian-gulf-disease.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.1016/j.marpolbul.2021.112707"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Baseline assessment of coral diseases in an
+                            environmentally extreme environment of the
+                            northern Persian Gulf
+                        </a>
+
+                        <p class="publication-authors">
+                            Hazraty-Kari, S., Tavakoli-Kolour, P.,
+                            Das, R.-R., Farhadi, M., et al.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Marine Pollution Bulletin</em>, 171, 112707.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- OLDER WORK -->
+
+        <div class="publication-year">
+
+            <h2>
+                Earlier research
+            </h2>
+
+
+            <article
+                class="publication-item"
+                data-category="ecology"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/paper_2014_bleaching.png"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="https://doi.org/10.1017/S0025315414000312"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Mass coral bleaching in the northern
+                            Persian Gulf, 2012
+                        </a>
+
+                        <p class="publication-authors">
+                            Kavousi, J., Tavakoli-Kolour, P.,
+                            Mohammadizadeh, M., Bahrami, A., et al.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Scientia Marina</em>, 78(3), 397–404.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="publication-item"
+                data-category="ecology"
+            >
+
+                <div class="publication-layout">
+
+                    <div class="publication-thumb">
+
+                        <img
+                            src="image/coralreef.JPG"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+
+                            <span class="pub-type">
+                                Article
+                            </span>
+                        </div>
+
+                        <a
+                            class="publication-title"
+                            href="#"
+                        >
+                            Coral reefs and community around Larak Island
+                            (Persian Gulf)
+                        </a>
+
+                        <p class="publication-authors">
+                            Mohammadizadeh, M., Tavakoli-Kolour, P.,
+                            & Rezai, H.
+                        </p>
+
+                        <p class="publication-journal">
+                            <em>Caspian Journal of Applied Science Research</em>,
+                            2(11), 52–60.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         SCIENTIFIC ASSESSMENT
+         ===================================================== -->
+
+    <section
+        id="assessment"
+        class="assessment-section"
+    >
+
+        <p class="section-label">
+            BEYOND PUBLICATIONS
+        </p>
+
+        <h2>
+            Scientific assessment & contribution
+        </h2>
+
+        <p>
+            My research programme connects field observations,
+            controlled experiments and long-term ecological monitoring
+            to understand when environmental experience enhances coral
+            resilience and when repeated stress becomes costly.
+        </p>
+
+        <div class="assessment-grid">
+
+            <div>
+                <strong>
+                    Environmental memory
+                </strong>
+
+                <span>
+                    Persistence and limits of thermal experience
+                </span>
+            </div>
+
+            <div>
+                <strong>
+                    Coral physiology
+                </strong>
+
+                <span>
+                    Thermal tolerance and bleaching responses
+                </span>
+            </div>
+
+            <div>
+                <strong>
+                    Mesophotic reefs
+                </strong>
+
+                <span>
+                    Depth-related acclimation and potential refugia
+                </span>
+            </div>
+
+            <div>
+                <strong>
+                    Reef health
+                </strong>
+
+                <span>
+                    Bleaching, mortality and coral disease
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h3>
+                PARVIZ TAVAKOLI-KOLOUR
+            </h3>
+
+            <p>
+                Coral Reef Ecologist
+            </p>
+
+            <p>
+                Institute of Oceanography<br>
+                National Taiwan University
+            </p>
+
+        </div>
+
+
+        <div class="footer-social">
+
+            <a
+                href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
+                target="_blank"
+                rel="noopener"
+            >
+                GS
+            </a>
+
+            <a
+                href="https://orcid.org/0000-0003-2633-5901"
+                target="_blank"
+                rel="noopener"
+            >
+                iD
+            </a>
+
+            <a
+                href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
+                target="_blank"
+                rel="noopener"
+            >
+                RG
+            </a>
+
+            <a
+                href="https://x.com/parviz_tavakoli"
+                target="_blank"
+                rel="noopener"
+            >
+                𝕏
+            </a>
+
+            <a
+                href="https://www.instagram.com/parviz_tavakoli_kolour"
+                target="_blank"
+                rel="noopener"
+            >
+                ◎
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Parviz Tavakoli-Kolour
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     PUBLICATION FILTER
+     ========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const buttons =
+        document.querySelectorAll(".filter-button");
+
+    const publications =
+        document.querySelectorAll(
+            ".publication-item, .selected-publication-card"
+        );
+
+
+    buttons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const filter =
+                button.getAttribute("data-filter");
+
+
+            buttons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+
+            publications.forEach(function (publication) {
+
+                const categories =
+                    publication
+                        .getAttribute("data-category")
+                        .split(" ");
+
+
+                if (
+                    filter === "all" ||
+                    categories.includes(filter)
+                ) {
+
+                    publication.style.display = "";
+
+                } else {
+
+                    publication.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
