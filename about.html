@@ -1,31 +1,42 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About | Parviz Tavakoli-Kolour</title>
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
 <header class="site-header">
-
     <div class="nav-container">
 
         <a href="index.html" class="site-name">
             PARVIZ TAVAKOLI-KOLOUR
         </a>
 
+        <button class="menu-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav class="main-nav">
 
             <a href="index.html">HOME</a>
 
             <div class="dropdown">
-                <a href="about.html">ABOUT <span>⌄</span></a>
-
+                <a href="about.html">
+                    ABOUT <span class="arrow">⌄</span>
+                </a>
                 <div class="dropdown-menu">
                     <a href="#biography">Biography</a>
                     <a href="#education">Education</a>
@@ -35,66 +46,38 @@
 
             <div class="dropdown">
                 <a href="research.html">
-                    RESEARCH <span>⌄</span>
+                    RESEARCH <span class="arrow">⌄</span>
                 </a>
-
                 <div class="dropdown-menu">
-                    <a href="research.html#coral-ecology">
-                        Coral Reef Ecology
-                    </a>
-                    <a href="research.html#thermal">
-                        Coral Physiology & Thermal Stress
-                    </a>
-                    <a href="research.html#depth">
-                        Depth & Mesophotic Reefs
-                    </a>
-                    <a href="research.html#disease">
-                        Coral Diseases & Reef Health
-                    </a>
-                    <a href="research.html#field">
-                        Field & Experimental Research
-                    </a>
+                    <a href="research.html#coral-ecology">Coral Reef Ecology</a>
+                    <a href="research.html#thermal">Thermal Stress</a>
+                    <a href="research.html#memory">Environmental Memory</a>
+                    <a href="research.html#depth">Depth & Mesophotic Reefs</a>
+                    <a href="research.html#disease">Coral Diseases</a>
+                    <a href="research.html#field">Field & Experimental Research</a>
                 </div>
             </div>
 
             <div class="dropdown">
                 <a href="publications.html">
-                    PUBLICATIONS <span>⌄</span>
+                    PUBLICATIONS <span class="arrow">⌄</span>
                 </a>
-
                 <div class="dropdown-menu">
-                    <a href="selected-publications.html">
-                        Selected Publications
-                    </a>
-                    <a href="publications.html#full-list">
-                        Full Publication List
-                    </a>
-                    <a href="publications.html#assessment">
-                        Scientific Assessment & Policy
-                    </a>
+                    <a href="publications.html#selected">Selected Publications</a>
+                    <a href="publications.html#full-list">Full Publication List</a>
+                    <a href="publications.html#assessment">Scientific Assessment</a>
                 </div>
             </div>
 
-            <a href="cv.html">CV</a>
-
             <div class="dropdown">
                 <a href="gallery.html">
-                    GALLERY <span>⌄</span>
+                    GALLERY <span class="arrow">⌄</span>
                 </a>
-
                 <div class="dropdown-menu">
-                    <a href="gallery.html#persian-gulf">
-                        Persian Gulf
-                    </a>
-                    <a href="gallery.html#okinawa">
-                        Okinawa
-                    </a>
-                    <a href="gallery.html#indonesia">
-                        Indonesia
-                    </a>
-                    <a href="gallery.html#taiwan">
-                        Taiwan
-                    </a>
+                    <a href="gallery.html#persian-gulf">Persian Gulf</a>
+                    <a href="gallery.html#okinawa">Okinawa</a>
+                    <a href="gallery.html#indonesia">Indonesia</a>
+                    <a href="gallery.html#taiwan">Taiwan</a>
                 </div>
             </div>
 
@@ -103,94 +86,80 @@
         </nav>
 
     </div>
-
 </header>
 
 
 <main>
 
-    <!-- PAGE HERO -->
-
     <section class="page-hero">
-
         <div class="page-hero-content">
-
-            <p class="section-label">
-                ABOUT
-            </p>
-
-            <h1>
-                About me
-            </h1>
-
+            <p class="section-label">ABOUT</p>
+            <h1>About me</h1>
             <p>
-                Coral reef ecologist investigating how corals
-                respond to environmental change.
+                Coral reef ecologist studying resilience,
+                environmental change and coral adaptation.
             </p>
+        </div>
+    </section>
+
+
+    <section id="biography" class="content-section section">
+
+        <div class="two-column">
+
+            <div class="content-image image-frame">
+                <img src="images/profile.jpg"
+                     alt="Parviz Tavakoli-Kolour"
+                     loading="lazy">
+            </div>
+
+            <div>
+
+                <p class="section-label">
+                    BIOGRAPHY
+                </p>
+
+                <h2>
+                    Coral reefs in a changing ocean
+                </h2>
+
+                <p>
+                    I am a coral reef ecologist working at the
+                    intersection of coral physiology, ecology and
+                    environmental change.
+                </p>
+
+                <p>
+                    My research focuses on understanding why some
+                    corals tolerate environmental stress better than
+                    others, how previous environmental exposure shapes
+                    later responses, and how these physiological
+                    responses scale up to influence coral populations
+                    and reef communities.
+                </p>
+
+                <p>
+                    I combine field surveys, long-term ecological
+                    observations and controlled experiments to study
+                    coral bleaching, mortality, thermal tolerance,
+                    acclimation, environmental memory and reef health.
+                </p>
+
+                <p>
+                    My field experience spans environmentally extreme
+                    and tropical reef systems including the Persian
+                    Gulf, Okinawa, Indonesia and Taiwan.
+                </p>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- BIOGRAPHY -->
-
-    <section class="intro-section" id="biography">
-
-        <div class="intro-image">
-
-            <img src="images/profile.jpg"
-                 alt="Parviz Tavakoli-Kolour">
-
-        </div>
-
-        <div class="intro-text">
-
-            <p class="section-label">
-                BIOGRAPHY
-            </p>
-
-            <h2>
-                Researching coral resilience across changing environments
-            </h2>
-
-            <p>
-                I am a coral reef ecologist interested in understanding
-                how corals respond to environmental variability and
-                climate-driven change.
-            </p>
-
-            <p>
-                My research combines coral ecophysiology, reef ecology,
-                experimental approaches and field-based observations to
-                investigate coral bleaching, thermal tolerance,
-                acclimation, adaptation and reef resilience.
-            </p>
-
-            <p>
-                I have worked across contrasting coral reef environments,
-                including the Persian Gulf, Okinawa and tropical
-                Southeast Asia. These systems provide opportunities to
-                investigate how corals respond to extreme temperatures,
-                depth-related environmental gradients and changing
-                reef conditions.
-            </p>
-
-            <p>
-                My current research continues to integrate experimental
-                and ecological approaches to understand the mechanisms
-                that determine coral persistence under environmental
-                change.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-
-    <section class="research-home" id="education">
+    <section id="education"
+             class="content-section section section-light">
 
         <div class="section-heading">
 
@@ -202,26 +171,21 @@
                 Academic background
             </h2>
 
-            <p>
-                My academic training has focused on marine science,
-                coral reef ecology and coral ecophysiology.
-            </p>
-
         </div>
 
 
         <div class="timeline">
 
-            <div class="timeline-item">
+            <article class="timeline-item">
 
-                <div class="timeline-year">
-                    PhD
-                </div>
+                <span class="timeline-year">
+                    2023
+                </span>
 
-                <div class="timeline-content">
+                <div>
 
                     <h3>
-                        Marine and Environmental Science
+                        Ph.D. in Marine and Environmental Science
                     </h3>
 
                     <p>
@@ -229,49 +193,24 @@
                     </p>
 
                     <p>
-                        Doctoral research focused on coral ecology,
-                        coral physiology, thermal tolerance,
-                        depth-related acclimation and coral reef
-                        responses to environmental change.
+                        Research focused on coral physiology,
+                        environmental stress and coral responses
+                        to changing reef environments.
                     </p>
 
                 </div>
 
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    Research
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Coral Reef Ecology & Ecophysiology
-                    </h3>
-
-                    <p>
-                        Research across contrasting coral reef
-                        environments in the Persian Gulf, Japan and
-                        Southeast Asia.
-                    </p>
-
-                </div>
-
-            </div>
+            </article>
 
         </div>
 
     </section>
 
 
-    <!-- ACADEMIC EXPERIENCE -->
+    <section id="experience"
+             class="content-section section">
 
-    <section class="experience-section" id="experience">
-
-        <div class="experience-header">
+        <div class="section-heading">
 
             <p class="section-label">
                 ACADEMIC EXPERIENCE
@@ -286,113 +225,66 @@
 
         <div class="experience-grid">
 
-            <div class="experience-card">
+            <article class="experience-card">
 
-                <span class="experience-number">
-                    01
+                <span class="experience-date">
+                    2024–Present
                 </span>
 
                 <h3>
-                    Coral Reef Ecology
+                    Research Collaborator / Technical Assistant
                 </h3>
 
-                <p>
-                    Field-based surveys and long-term monitoring of
-                    coral communities, bleaching, mortality and
-                    environmental change.
+                <p class="institution">
+                    Sesoko Marine Research Station<br>
+                    Tropical Biosphere Research Center<br>
+                    University of the Ryukyus, Okinawa
                 </p>
 
-            </div>
+                <p>
+                    Coral reef ecology, field monitoring,
+                    coral physiology and experimental research.
+                </p>
+
+            </article>
 
 
-            <div class="experience-card">
+            <article class="experience-card">
 
-                <span class="experience-number">
-                    02
+                <span class="experience-date">
+                    Current
                 </span>
 
                 <h3>
-                    Coral Physiology
+                    Postdoctoral Researcher
                 </h3>
 
-                <p>
-                    Experimental investigation of coral responses to
-                    temperature, environmental variability and
-                    physiological stress.
+                <p class="institution">
+                    Institute of Oceanography<br>
+                    National Taiwan University
                 </p>
 
-            </div>
-
-
-            <div class="experience-card">
-
-                <span class="experience-number">
-                    03
-                </span>
-
-                <h3>
-                    Thermal Stress
-                </h3>
-
                 <p>
-                    Research on coral thermal tolerance, bleaching,
-                    heat stress and acclimation to changing thermal
-                    environments.
+                    Research on coral responses to environmental
+                    change, thermal stress and reef resilience.
                 </p>
 
-            </div>
-
-
-            <div class="experience-card">
-
-                <span class="experience-number">
-                    04
-                </span>
-
-                <h3>
-                    Field Research
-                </h3>
-
-                <p>
-                    Coral reef surveys and experimental fieldwork
-                    across contrasting tropical environments.
-                </p>
-
-            </div>
+            </article>
 
         </div>
 
     </section>
 
 
-    <!-- CURRENT RESEARCH -->
+    <section class="quote-section">
 
-    <section class="field-section">
-
-        <div class="field-image"
-             style="background-image: url('images/okinawa-1.jpg');">
-        </div>
-
-        <div class="field-content">
-
-            <p class="section-label">
-                CURRENT RESEARCH
-            </p>
-
-            <h2>
-                Coral reefs in a changing ocean
-            </h2>
+        <div>
 
             <p>
-                My research aims to connect environmental change with
-                the physiological and ecological responses of corals,
-                from individual colonies to entire reef communities.
+                “Understanding coral resilience requires connecting
+                processes within individual colonies to changes across
+                entire reef ecosystems.”
             </p>
-
-            <a href="research.html"
-               class="button button-light">
-                EXPLORE MY RESEARCH
-            </a>
 
         </div>
 
@@ -406,41 +298,34 @@
     <div class="footer-content">
 
         <div>
-
-            <h3>
-                PARVIZ TAVAKOLI-KOLOUR
-            </h3>
-
-            <p>
-                Coral Reef Ecologist
-            </p>
-
+            <h3>PARVIZ TAVAKOLI-KOLOUR</h3>
+            <p>Coral Reef Ecologist</p>
             <p>
                 Institute of Oceanography<br>
                 National Taiwan University
             </p>
-
         </div>
-
 
         <div class="footer-social">
 
-            <a href="#" aria-label="Google Scholar">
-                GS
-            </a>
+            <a href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
+               target="_blank" rel="noopener">GS</a>
 
-            <a href="#" aria-label="ORCID">
-                iD
-            </a>
+            <a href="https://orcid.org/0000-0003-2633-5901"
+               target="_blank" rel="noopener">iD</a>
 
-            <a href="#" aria-label="ResearchGate">
-                RG
-            </a>
+            <a href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
+               target="_blank" rel="noopener">RG</a>
+
+            <a href="https://x.com/parviz_tavakoli"
+               target="_blank" rel="noopener">𝕏</a>
+
+            <a href="https://www.instagram.com/parviz_tavakoli_kolour"
+               target="_blank" rel="noopener">◎</a>
 
         </div>
 
     </div>
-
 
     <div class="copyright">
         © 2026 Parviz Tavakoli-Kolour
@@ -448,6 +333,8 @@
 
 </footer>
 
+<script src="js/main.js"></script>
 
 </body>
 </html>
+```
