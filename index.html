@@ -1,206 +1,102 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>Parviz Tavakoli-Kolour | Coral Reef Ecologist</title>
+    <meta name="description" content="Parviz Tavakoli-Kolour — Coral reef ecologist studying coral resilience, thermal stress, environmental memory, mesophotic reefs and reef change.">
 
-    <title>
-        Parviz Tavakoli-Kolour | Coral Reef Ecologist
-    </title>
-
-    <meta
-        name="description"
-        content="Parviz Tavakoli-Kolour — Coral reef ecologist studying coral resilience, thermal stress, environmental memory, mesophotic reefs and reef health."
-    >
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-
-<!-- ======================================================
-     HEADER
-     ====================================================== -->
-
 <header class="site-header">
-
     <div class="nav-container">
 
-        <a
-            href="index.html"
-            class="site-name"
-        >
+        <a href="index.html" class="site-name">
             PARVIZ TAVAKOLI-KOLOUR
         </a>
 
+        <button class="menu-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
         <nav class="main-nav">
 
-            <a href="index.html">
-                HOME
-            </a>
-
+            <a href="index.html">HOME</a>
 
             <div class="dropdown">
-
                 <a href="about.html">
-                    ABOUT <span>⌄</span>
+                    ABOUT <span class="arrow">⌄</span>
                 </a>
 
                 <div class="dropdown-menu">
-
-                    <a href="about.html#biography">
-                        Biography
-                    </a>
-
-                    <a href="about.html#education">
-                        Education
-                    </a>
-
-                    <a href="about.html#experience">
-                        Academic Experience
-                    </a>
-
+                    <a href="about.html#biography">Biography</a>
+                    <a href="about.html#education">Education</a>
+                    <a href="about.html#experience">Academic Experience</a>
                 </div>
-
             </div>
 
-
             <div class="dropdown">
-
                 <a href="research.html">
-                    RESEARCH <span>⌄</span>
+                    RESEARCH <span class="arrow">⌄</span>
                 </a>
 
                 <div class="dropdown-menu">
-
-                    <a href="research.html#coral-ecology">
-                        Coral Reef Ecology
-                    </a>
-
-                    <a href="research.html#thermal">
-                        Coral Physiology & Thermal Stress
-                    </a>
-
-                    <a href="research.html#depth">
-                        Depth & Mesophotic Reefs
-                    </a>
-
-                    <a href="research.html#disease">
-                        Coral Diseases & Reef Health
-                    </a>
-
-                    <a href="research.html#field">
-                        Field & Experimental Research
-                    </a>
-
+                    <a href="research.html#coral-ecology">Coral Reef Ecology</a>
+                    <a href="research.html#thermal">Thermal Stress</a>
+                    <a href="research.html#memory">Environmental Memory</a>
+                    <a href="research.html#depth">Depth & Mesophotic Reefs</a>
+                    <a href="research.html#disease">Coral Diseases</a>
+                    <a href="research.html#field">Field & Experimental Research</a>
                 </div>
-
             </div>
 
-
             <div class="dropdown">
-
                 <a href="publications.html">
-                    PUBLICATIONS <span>⌄</span>
+                    PUBLICATIONS <span class="arrow">⌄</span>
                 </a>
 
                 <div class="dropdown-menu">
-
-                    <a href="publications.html#selected">
-                        Selected Publications
-                    </a>
-
-                    <a href="publications.html#full-list">
-                        Full Publication List
-                    </a>
-
-                    <a href="publications.html#assessment">
-                        Scientific Assessment
-                    </a>
-
+                    <a href="publications.html#selected">Selected Publications</a>
+                    <a href="publications.html#full-list">Full Publication List</a>
+                    <a href="publications.html#assessment">Scientific Assessment</a>
                 </div>
-
             </div>
-
-
-            <a href="cv.html">
-                CV
-            </a>
-
 
             <div class="dropdown">
-
                 <a href="gallery.html">
-                    GALLERY <span>⌄</span>
+                    GALLERY <span class="arrow">⌄</span>
                 </a>
 
                 <div class="dropdown-menu">
-
-                    <a href="gallery.html#persian-gulf">
-                        Persian Gulf
-                    </a>
-
-                    <a href="gallery.html#okinawa">
-                        Okinawa
-                    </a>
-
-                    <a href="gallery.html#indonesia">
-                        Indonesia
-                    </a>
-
-                    <a href="gallery.html#taiwan">
-                        Taiwan
-                    </a>
-
+                    <a href="gallery.html#persian-gulf">Persian Gulf</a>
+                    <a href="gallery.html#okinawa">Okinawa</a>
+                    <a href="gallery.html#indonesia">Indonesia</a>
+                    <a href="gallery.html#taiwan">Taiwan</a>
                 </div>
-
             </div>
 
-
-            <a href="contact.html">
-                CONTACT
-            </a>
+            <a href="contact.html">CONTACT</a>
 
         </nav>
-
     </div>
-
 </header>
 
 
-<!-- ======================================================
-     MAIN
-     ====================================================== -->
-
 <main>
 
-
-    <!-- ==================================================
-         HERO
-         ================================================== -->
-
+    <!-- HERO -->
     <section class="hero">
 
-        <img
-            class="hero-image"
-            src="image/coral-reef-hero.jpg"
-            alt=""
-        >
-
         <div class="hero-overlay"></div>
-
 
         <div class="hero-content">
 
@@ -214,7 +110,7 @@
             </h1>
 
             <p class="hero-position">
-                Coral Reef Ecologist
+                Postdoctoral Researcher
             </p>
 
             <p class="hero-affiliation">
@@ -222,45 +118,32 @@
                 National Taiwan University
             </p>
 
-
             <div class="hero-buttons">
 
-                <a
-                    href="research.html"
-                    class="button button-light"
-                >
+                <a href="research.html"
+                   class="button button-light">
                     MY RESEARCH
                 </a>
 
-                <a
-                    href="publications.html"
-                    class="button button-outline"
-                >
+                <a href="publications.html"
+                   class="button button-outline">
                     PUBLICATIONS
                 </a>
 
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- ==================================================
-         ABOUT
-         ================================================== -->
+    <!-- ABOUT INTRO -->
+    <section class="intro-section section">
 
-    <section class="intro-section">
-
-        <div class="intro-image">
-
-            <img
-                src="image/profile.jpg"
-                alt="Parviz Tavakoli-Kolour"
-            >
-
+        <div class="intro-image image-frame">
+            <img src="images/profile.jpg"
+                 alt="Parviz Tavakoli-Kolour"
+                 loading="lazy">
         </div>
-
 
         <div class="intro-text">
 
@@ -286,10 +169,7 @@
                 acclimation and reef health.
             </p>
 
-            <a
-                href="about.html"
-                class="text-link"
-            >
+            <a href="about.html" class="text-link">
                 MORE ABOUT ME →
             </a>
 
@@ -298,11 +178,8 @@
     </section>
 
 
-    <!-- ==================================================
-         RESEARCH THEMES
-         ================================================== -->
-
-    <section class="research-home">
+    <!-- RESEARCH -->
+    <section class="research-home section section-light">
 
         <div class="section-heading">
 
@@ -325,35 +202,27 @@
 
         <div class="research-grid">
 
-            <a
-                href="research.html#coral-ecology"
-                class="research-card"
-            >
+            <a href="research.html#coral-ecology"
+               class="research-card">
 
-                <div class="card-number">
-                    01
-                </div>
+                <span class="card-number">01</span>
 
                 <h3>
                     Coral Reef Ecology
                 </h3>
 
                 <p>
-                    Understanding patterns of coral communities,
-                    bleaching, mortality and reef change.
+                    Understanding coral communities, bleaching,
+                    mortality and long-term reef change.
                 </p>
 
             </a>
 
 
-            <a
-                href="research.html#thermal"
-                class="research-card"
-            >
+            <a href="research.html#thermal"
+               class="research-card">
 
-                <div class="card-number">
-                    02
-                </div>
+                <span class="card-number">02</span>
 
                 <h3>
                     Thermal Stress
@@ -367,43 +236,35 @@
             </a>
 
 
-            <a
-                href="research.html#depth"
-                class="research-card"
-            >
+            <a href="research.html#memory"
+               class="research-card">
 
-                <div class="card-number">
-                    03
-                </div>
+                <span class="card-number">03</span>
+
+                <h3>
+                    Environmental Memory
+                </h3>
+
+                <p>
+                    Exploring how previous environmental exposure
+                    shapes responses to subsequent stress.
+                </p>
+
+            </a>
+
+
+            <a href="research.html#depth"
+               class="research-card">
+
+                <span class="card-number">04</span>
 
                 <h3>
                     Depth & Mesophotic Reefs
                 </h3>
 
                 <p>
-                    Exploring acclimation and the potential of
-                    deeper habitats as coral refugia.
-                </p>
-
-            </a>
-
-
-            <a
-                href="research.html#disease"
-                class="research-card"
-            >
-
-                <div class="card-number">
-                    04
-                </div>
-
-                <h3>
-                    Coral Diseases
-                </h3>
-
-                <p>
-                    Investigating coral diseases and reef health
-                    across environmentally extreme systems.
+                    Examining acclimation across depth and the
+                    potential role of deeper reefs as refugia.
                 </p>
 
             </a>
@@ -413,21 +274,14 @@
     </section>
 
 
-    <!-- ==================================================
-         FIELD RESEARCH
-         ================================================== -->
-
+    <!-- FIELDWORK -->
     <section class="field-section">
 
         <div class="field-image">
-
-            <img
-                src="image/coralreef.JPG"
-                alt="Coral reef fieldwork"
-            >
-
+            <img src="images/fieldwork.jpg"
+                 alt="Coral reef fieldwork"
+                 loading="lazy">
         </div>
-
 
         <div class="field-content">
 
@@ -446,10 +300,8 @@
                 understanding coral responses to environmental change.
             </p>
 
-            <a
-                href="gallery.html"
-                class="button button-dark"
-            >
+            <a href="gallery.html"
+               class="button button-dark">
                 EXPLORE THE GALLERY
             </a>
 
@@ -458,11 +310,8 @@
     </section>
 
 
-    <!-- ==================================================
-         PUBLICATIONS
-         ================================================== -->
-
-    <section class="publication-home">
+    <!-- PUBLICATIONS -->
+    <section class="publication-home section">
 
         <p class="section-label">
             PUBLICATIONS
@@ -474,26 +323,19 @@
 
         <p>
             My publications cover coral physiology, thermal stress,
-            environmental memory, mesophotic ecosystems, coral
-            diseases, reef ecology and marine biodiversity.
+            environmental memory, mesophotic ecosystems, coral diseases,
+            reef ecology and marine biodiversity.
         </p>
 
-        <a
-            href="publications.html"
-            class="text-link"
-        >
+        <a href="publications.html"
+           class="text-link">
             VIEW PUBLICATIONS →
         </a>
 
     </section>
 
-
 </main>
 
-
-<!-- ======================================================
-     FOOTER
-     ====================================================== -->
 
 <footer>
 
@@ -519,50 +361,44 @@
 
         <div class="footer-social">
 
-            <a
-                href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
-                target="_blank"
-                rel="noopener"
-            >
+            <a href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
+               target="_blank"
+               rel="noopener"
+               aria-label="Google Scholar">
                 GS
             </a>
 
-            <a
-                href="https://orcid.org/0000-0003-2633-5901"
-                target="_blank"
-                rel="noopener"
-            >
+            <a href="https://orcid.org/0000-0003-2633-5901"
+               target="_blank"
+               rel="noopener"
+               aria-label="ORCID">
                 iD
             </a>
 
-            <a
-                href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
-                target="_blank"
-                rel="noopener"
-            >
+            <a href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
+               target="_blank"
+               rel="noopener"
+               aria-label="ResearchGate">
                 RG
             </a>
 
-            <a
-                href="https://x.com/parviz_tavakoli"
-                target="_blank"
-                rel="noopener"
-            >
+            <a href="https://x.com/parviz_tavakoli"
+               target="_blank"
+               rel="noopener"
+               aria-label="X">
                 𝕏
             </a>
 
-            <a
-                href="https://www.instagram.com/parviz_tavakoli_kolour"
-                target="_blank"
-                rel="noopener"
-            >
+            <a href="https://www.instagram.com/parviz_tavakoli_kolour"
+               target="_blank"
+               rel="noopener"
+               aria-label="Instagram">
                 ◎
             </a>
 
         </div>
 
     </div>
-
 
     <div class="copyright">
         © 2026 Parviz Tavakoli-Kolour
@@ -571,5 +407,8 @@
 </footer>
 
 
+<script src="js/main.js"></script>
+
 </body>
 </html>
+```
