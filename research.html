@@ -1,851 +1,416 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Research | Parviz Tavakoli-Kolour</title>
 
-    <title>
-        Research | Parviz Tavakoli-Kolour
-    </title>
-
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header class="site-header">
-
     <div class="nav-container">
 
-        <a href="index.html"
-           class="site-name">
-
+        <a href="index.html" class="site-name">
             PARVIZ TAVAKOLI-KOLOUR
-
         </a>
 
+        <button class="menu-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
         <nav class="main-nav">
 
-            <a href="index.html">
-                HOME
-            </a>
-
+            <a href="index.html">HOME</a>
 
             <div class="dropdown">
-
                 <a href="about.html">
-                    ABOUT <span>⌄</span>
+                    ABOUT <span class="arrow">⌄</span>
                 </a>
-
                 <div class="dropdown-menu">
-
-                    <a href="about.html#biography">
-                        Biography
-                    </a>
-
-                    <a href="about.html#education">
-                        Education
-                    </a>
-
-                    <a href="about.html#experience">
-                        Academic Experience
-                    </a>
-
+                    <a href="about.html#biography">Biography</a>
+                    <a href="about.html#education">Education</a>
+                    <a href="about.html#experience">Academic Experience</a>
                 </div>
-
             </div>
 
-
             <div class="dropdown">
-
                 <a href="research.html">
-                    RESEARCH <span>⌄</span>
+                    RESEARCH <span class="arrow">⌄</span>
                 </a>
-
                 <div class="dropdown-menu">
-
-                    <a href="#coral-ecology">
-                        Coral Reef Ecology
-                    </a>
-
-                    <a href="#thermal">
-                        Coral Physiology & Thermal Stress
-                    </a>
-
-                    <a href="#depth">
-                        Depth & Mesophotic Reefs
-                    </a>
-
-                    <a href="#disease">
-                        Coral Diseases & Reef Health
-                    </a>
-
-                    <a href="#environment">
-                        Environmental Change & Resilience
-                    </a>
-
-                    <a href="#field">
-                        Field & Experimental Research
-                    </a>
-
+                    <a href="#coral-ecology">Coral Reef Ecology</a>
+                    <a href="#thermal">Thermal Stress</a>
+                    <a href="#memory">Environmental Memory</a>
+                    <a href="#depth">Depth & Mesophotic Reefs</a>
+                    <a href="#disease">Coral Diseases</a>
+                    <a href="#field">Field & Experimental Research</a>
                 </div>
-
             </div>
 
-
             <div class="dropdown">
-
                 <a href="publications.html">
-                    PUBLICATIONS <span>⌄</span>
+                    PUBLICATIONS <span class="arrow">⌄</span>
                 </a>
-
                 <div class="dropdown-menu">
-
-                    <a href="selected-publications.html">
-                        Selected Publications
-                    </a>
-
-                    <a href="publications.html#full-list">
-                        Full Publication List
-                    </a>
-
-                    <a href="publications.html#assessment">
-                        Scientific Assessment & Policy
-                    </a>
-
+                    <a href="publications.html#selected">Selected Publications</a>
+                    <a href="publications.html#full-list">Full Publication List</a>
+                    <a href="publications.html#assessment">Scientific Assessment</a>
                 </div>
-
             </div>
-
-
-            <a href="cv.html">
-                CV
-            </a>
-
 
             <div class="dropdown">
-
                 <a href="gallery.html">
-                    GALLERY <span>⌄</span>
+                    GALLERY <span class="arrow">⌄</span>
                 </a>
-
                 <div class="dropdown-menu">
-
-                    <a href="gallery.html#persian-gulf">
-                        Persian Gulf
-                    </a>
-
-                    <a href="gallery.html#okinawa">
-                        Okinawa
-                    </a>
-
-                    <a href="gallery.html#indonesia">
-                        Indonesia
-                    </a>
-
-                    <a href="gallery.html#taiwan">
-                        Taiwan
-                    </a>
-
+                    <a href="gallery.html#persian-gulf">Persian Gulf</a>
+                    <a href="gallery.html#okinawa">Okinawa</a>
+                    <a href="gallery.html#indonesia">Indonesia</a>
+                    <a href="gallery.html#taiwan">Taiwan</a>
                 </div>
-
             </div>
 
-
-            <a href="contact.html">
-                CONTACT
-            </a>
+            <a href="contact.html">CONTACT</a>
 
         </nav>
 
     </div>
-
 </header>
-
-
-
-<!-- =====================================================
-     RESEARCH HERO
-===================================================== -->
-
-<section class="page-hero">
-
-    <div class="page-hero-content">
-
-        <p class="section-label">
-            RESEARCH
-        </p>
-
-        <h1>
-            Research
-        </h1>
-
-        <p>
-            Understanding coral resilience, environmental
-            change and the future of tropical reefs.
-        </p>
-
-    </div>
-
-</section>
-
 
 
 <main>
 
+    <section class="page-hero">
 
-<!-- =====================================================
-     RESEARCH INTRODUCTION
-===================================================== -->
+        <div class="page-hero-content">
 
-<section class="publication-home">
-
-    <p class="section-label">
-        RESEARCH PROGRAMME
-    </p>
-
-    <h2>
-        From coral physiology to reef-scale change
-    </h2>
-
-    <p>
-
-        My research investigates how corals respond to
-        environmental variability across spatial, temporal
-        and biological scales.
-
-    </p>
-
-    <p>
-
-        I combine field observations, long-term ecological
-        monitoring and controlled experiments to understand
-        the mechanisms underlying coral resilience,
-        acclimation, bleaching and mortality.
-
-    </p>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH THEME 01
-===================================================== -->
-
-<section class="research-detail"
-         id="coral-ecology">
-
-
-    <div class="research-detail-image">
-
-        <img src="images/okinawa-1.jpg"
-             alt="Coral reef">
-
-    </div>
-
-
-    <div class="research-detail-content">
-
-        <p class="section-label">
-            RESEARCH THEME 01
-        </p>
-
-        <h2>
-            Coral Reef Ecology
-        </h2>
-
-        <p>
-
-            Coral reefs are dynamic ecosystems shaped by
-            interactions between organisms and their physical
-            environment.
-
-        </p>
-
-        <p>
-
-            My ecological research examines coral community
-            structure, bleaching, mortality and changes in
-            reef composition across environmental gradients
-            and through time.
-
-        </p>
-
-        <h3>
-            Key questions
-        </h3>
-
-        <ul>
-
-            <li>
-                Why do some coral colonies survive extreme
-                environmental stress while others die?
-            </li>
-
-            <li>
-                How does coral size influence bleaching and
-                mortality?
-            </li>
-
-            <li>
-                How do repeated disturbances reshape coral
-                reef communities?
-            </li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH THEME 02
-===================================================== -->
-
-<section class="research-detail reverse"
-         id="thermal">
-
-
-    <div class="research-detail-image">
-
-        <img src="images/hero.jpg"
-             alt="Coral thermal stress experiment">
-
-    </div>
-
-
-    <div class="research-detail-content">
-
-        <p class="section-label">
-            RESEARCH THEME 02
-        </p>
-
-        <h2>
-            Coral Physiology & Thermal Stress
-        </h2>
-
-        <p>
-
-            Rising ocean temperatures are among the most
-            important threats facing coral reefs.
-
-        </p>
-
-        <p>
-
-            My experimental research investigates coral
-            thermal tolerance, bleaching responses and
-            physiological consequences of acute and chronic
-            temperature stress.
-
-        </p>
-
-        <h3>
-            Key questions
-        </h3>
-
-        <ul>
-
-            <li>
-                What determines coral thermal tolerance?
-            </li>
-
-            <li>
-                How do the intensity and duration of heat
-                stress affect coral performance?
-            </li>
-
-            <li>
-                Can previous thermal exposure improve
-                resistance to future heatwaves?
-            </li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH THEME 03
-===================================================== -->
-
-<section class="research-detail"
-         id="depth">
-
-
-    <div class="research-detail-image">
-
-        <img src="images/about-1.jpg"
-             alt="Deep coral reef">
-
-    </div>
-
-
-    <div class="research-detail-content">
-
-        <p class="section-label">
-            RESEARCH THEME 03
-        </p>
-
-        <h2>
-            Depth & Mesophotic Coral Ecosystems
-        </h2>
-
-        <p>
-
-            Deeper coral habitats experience different
-            combinations of light, temperature and other
-            environmental conditions.
-
-        </p>
-
-        <p>
-
-            I investigate whether corals can acclimate to
-            deeper environments and whether mesophotic reefs
-            can contribute to coral persistence under
-            environmental change.
-
-        </p>
-
-        <h3>
-            Key questions
-        </h3>
-
-        <ul>
-
-            <li>
-                Can shallow corals acclimate to mesophotic
-                environments?
-            </li>
-
-            <li>
-                Does depth-related acclimation influence
-                thermal tolerance?
-            </li>
-
-            <li>
-                Can deeper habitats function as refugia?
-            </li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH THEME 04
-===================================================== -->
-
-<section class="research-detail reverse"
-         id="disease">
-
-
-    <div class="research-detail-image">
-
-        <img src="images/persian-gulf-1.jpg"
-             alt="Coral reef health">
-
-    </div>
-
-
-    <div class="research-detail-content">
-
-        <p class="section-label">
-            RESEARCH THEME 04
-        </p>
-
-        <h2>
-            Coral Diseases & Reef Health
-        </h2>
-
-        <p>
-
-            Coral health is influenced by interactions among
-            temperature, environmental stressors, pathogens
-            and host condition.
-
-        </p>
-
-        <p>
-
-            My work examines patterns of coral health,
-            disease and mortality within environmentally
-            challenging reef systems.
-
-        </p>
-
-        <h3>
-            Key questions
-        </h3>
-
-        <ul>
-
-            <li>
-                How do environmental conditions influence
-                coral health?
-            </li>
-
-            <li>
-                Which coral colonies are most vulnerable?
-            </li>
-
-            <li>
-                How do disease and thermal stress interact?
-            </li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH THEME 05
-===================================================== -->
-
-<section class="research-detail"
-         id="environment">
-
-
-    <div class="research-detail-image">
-
-        <img src="images/indonesia-1.jpg"
-             alt="Tropical coral reef">
-
-    </div>
-
-
-    <div class="research-detail-content">
-
-        <p class="section-label">
-            RESEARCH THEME 05
-        </p>
-
-        <h2>
-            Environmental Change & Coral Resilience
-        </h2>
-
-        <p>
-
-            Coral resilience depends not only on the magnitude
-            of environmental stress, but also on its timing,
-            variability and history.
-
-        </p>
-
-        <p>
-
-            I am particularly interested in environmental
-            memory, thermal history and the limits of coral
-            acclimation under repeated climate-driven
-            disturbances.
-
-        </p>
-
-        <h3>
-            Key questions
-        </h3>
-
-        <ul>
-
-            <li>
-                How long can coral thermal memory persist?
-            </li>
-
-            <li>
-                Does environmental variability increase
-                resilience?
-            </li>
-
-            <li>
-                Are there limits to coral acclimation?
-            </li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH THEME 06
-===================================================== -->
-
-<section class="research-detail reverse"
-         id="field">
-
-
-    <div class="research-detail-image">
-
-        <img src="images/taiwan-1.jpg"
-             alt="Coral reef field research">
-
-    </div>
-
-
-    <div class="research-detail-content">
-
-        <p class="section-label">
-            RESEARCH THEME 06
-        </p>
-
-        <h2>
-            Field & Experimental Research
-        </h2>
-
-        <p>
-
-            A central part of my research approach is the
-            integration of natural field observations with
-            controlled laboratory experiments.
-
-        </p>
-
-        <p>
-
-            Field surveys reveal how coral communities respond
-            to real environmental conditions, while experiments
-            allow specific mechanisms and causal relationships
-            to be tested.
-
-        </p>
-
-        <h3>
-            Research approaches
-        </h3>
-
-        <ul>
-
-            <li>
-                Coral reef field surveys
-            </li>
-
-            <li>
-                Long-term ecological monitoring
-            </li>
-
-            <li>
-                Thermal stress experiments
-            </li>
-
-            <li>
-                Coral transplantation experiments
-            </li>
-
-            <li>
-                Environmental monitoring
-            </li>
-
-            <li>
-                Quantitative ecological modelling
-            </li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH LOCATIONS
-===================================================== -->
-
-<section class="research-locations">
-
-    <div class="section-heading">
-
-        <p class="section-label">
-            RESEARCH ENVIRONMENTS
-        </p>
-
-        <h2>
-            Coral reefs across contrasting environments
-        </h2>
-
-    </div>
-
-
-    <div class="location-grid">
-
-
-        <a href="gallery.html#persian-gulf"
-           class="location-card">
-
-            <h3>
-                Persian Gulf
-            </h3>
-
-            <p>
-                Extreme thermal environments and coral
-                resilience.
+            <p class="section-label">
+                RESEARCH
             </p>
 
-        </a>
-
-
-        <a href="gallery.html#okinawa"
-           class="location-card">
-
-            <h3>
-                Okinawa
-            </h3>
+            <h1>
+                Coral reefs under environmental change
+            </h1>
 
             <p>
-                Tropical and subtropical coral reef
-                ecosystems.
+                From coral physiology to reef-scale ecological change.
             </p>
 
-        </a>
+        </div>
+
+    </section>
 
 
-        <a href="gallery.html#indonesia"
-           class="location-card">
+    <section class="research-intro section">
 
-            <h3>
-                Indonesia
-            </h3>
+        <div class="section-heading">
+
+            <p class="section-label">
+                RESEARCH PROGRAM
+            </p>
+
+            <h2>
+                How do corals persist in a rapidly changing ocean?
+            </h2>
 
             <p>
-                Tropical coral diversity and reef ecology.
+                My research investigates how environmental conditions
+                shape coral physiology, acclimation, resilience and
+                reef community dynamics.
             </p>
 
-        </a>
+        </div>
+
+    </section>
 
 
-        <a href="gallery.html#taiwan"
-           class="location-card">
+    <section id="coral-ecology"
+             class="research-detail section section-light">
 
-            <h3>
-                Taiwan
-            </h3>
+        <div class="research-number">
+            01
+        </div>
+
+        <div class="research-detail-content">
+
+            <p class="section-label">
+                CORAL REEF ECOLOGY
+            </p>
+
+            <h2>
+                Coral communities, bleaching and mortality
+            </h2>
 
             <p>
-                Coral reefs under changing environmental
-                conditions.
+                I investigate how coral communities respond to
+                repeated environmental disturbances, with particular
+                interest in bleaching, mortality, colony size and
+                spatial variation in vulnerability.
             </p>
 
-        </a>
+            <p>
+                Field surveys allow me to connect individual colony
+                traits and physiological responses with changes in
+                coral populations and reef communities.
+            </p>
+
+        </div>
+
+    </section>
 
 
-    </div>
+    <section id="thermal"
+             class="research-detail section">
 
-</section>
+        <div class="research-number">
+            02
+        </div>
+
+        <div class="research-detail-content">
+
+            <p class="section-label">
+                THERMAL STRESS
+            </p>
+
+            <h2>
+                Coral physiology and thermal tolerance
+            </h2>
+
+            <p>
+                Marine heatwaves are becoming more frequent and
+                intense. I study how corals respond to acute and
+                chronic thermal stress and why thermal tolerance
+                differs among colonies, populations and environments.
+            </p>
+
+            <p>
+                My experimental work combines controlled temperature
+                treatments with measurements of bleaching, survival,
+                photosynthetic performance and tissue condition.
+            </p>
+
+        </div>
+
+    </section>
 
 
+    <section id="memory"
+             class="research-detail section section-light">
 
-<!-- =====================================================
-     RESEARCH PHILOSOPHY
-===================================================== -->
+        <div class="research-number">
+            03
+        </div>
 
-<section class="publication-home">
+        <div class="research-detail-content">
 
-    <p class="section-label">
-        RESEARCH APPROACH
-    </p>
+            <p class="section-label">
+                ENVIRONMENTAL MEMORY
+            </p>
 
-    <h2>
-        Connecting experiments with ecological reality
-    </h2>
+            <h2>
+                Does a coral remember previous heat exposure?
+            </h2>
 
-    <p>
+            <p>
+                Previous environmental exposure can alter the response
+                of corals to future stress. I am particularly interested
+                in the duration, strength and limits of this environmental
+                memory.
+            </p>
 
-        The goal of my research is to move beyond describing
-        patterns of coral decline and identify the mechanisms
-        that determine coral persistence, resilience and
-        vulnerability.
+            <p>
+                This research asks whether thermal history provides
+                lasting protection, when that protection disappears,
+                and whether repeated heatwaves eventually overwhelm
+                the benefits of previous exposure.
+            </p>
 
-    </p>
+        </div>
 
-</section>
+    </section>
 
+
+    <section id="depth"
+             class="research-detail section">
+
+        <div class="research-number">
+            04
+        </div>
+
+        <div class="research-detail-content">
+
+            <p class="section-label">
+                DEPTH & MESOPHOTIC REEFS
+            </p>
+
+            <h2>
+                Acclimation across depth
+            </h2>
+
+            <p>
+                Depth creates strong gradients in light, temperature
+                and other environmental conditions. I investigate how
+                corals acclimate when transplanted across depth and
+                whether deeper environments can provide refugia from
+                surface warming.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="disease"
+             class="research-detail section section-light">
+
+        <div class="research-number">
+            05
+        </div>
+
+        <div class="research-detail-content">
+
+            <p class="section-label">
+                CORAL DISEASES & REEF HEALTH
+            </p>
+
+            <h2>
+                Disease, stress and reef condition
+            </h2>
+
+            <p>
+                Coral diseases provide another window into how
+                environmental stress influences reef health.
+                My work includes field-based assessments of coral
+                disease and the spatial distribution of affected
+                colonies.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="field"
+             class="research-detail section">
+
+        <div class="research-number">
+            06
+        </div>
+
+        <div class="research-detail-content">
+
+            <p class="section-label">
+                FIELD & EXPERIMENTAL RESEARCH
+            </p>
+
+            <h2>
+                Connecting natural environments with controlled experiments
+            </h2>
+
+            <p>
+                A central feature of my research is the combination
+                of field observations and laboratory experiments.
+                Natural reefs reveal ecological patterns, while
+                controlled experiments help identify the mechanisms
+                behind those patterns.
+            </p>
+
+            <div class="method-grid">
+
+                <div>
+                    <h3>Field surveys</h3>
+                    <p>
+                        Coral cover, bleaching, mortality,
+                        disease and community structure.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Experiments</h3>
+                    <p>
+                        Thermal stress, acclimation,
+                        transplantation and recovery.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Physiology</h3>
+                    <p>
+                        Photosynthesis, survival,
+                        tissue condition and symbiosis.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Data analysis</h3>
+                    <p>
+                        Statistical modelling, environmental
+                        datasets and ecological synthesis.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
 
     <div class="footer-content">
 
         <div>
-
-            <h3>
-                PARVIZ TAVAKOLI-KOLOUR
-            </h3>
-
-            <p>
-                Coral Reef Ecologist
-            </p>
-
+            <h3>PARVIZ TAVAKOLI-KOLOUR</h3>
+            <p>Coral Reef Ecologist</p>
             <p>
                 Institute of Oceanography<br>
                 National Taiwan University
             </p>
-
         </div>
-
 
         <div class="footer-social">
 
-            <a href="#">
-                GS
-            </a>
+            <a href="https://scholar.google.com/citations?user=l_zzIt8AAAAJ&hl=en"
+               target="_blank" rel="noopener">GS</a>
 
-            <a href="#">
-                iD
-            </a>
+            <a href="https://orcid.org/0000-0003-2633-5901"
+               target="_blank" rel="noopener">iD</a>
 
-            <a href="#">
-                RG
-            </a>
+            <a href="https://www.researchgate.net/profile/Parviz-Tavakoli-Kolour-2"
+               target="_blank" rel="noopener">RG</a>
+
+            <a href="https://x.com/parviz_tavakoli"
+               target="_blank" rel="noopener">𝕏</a>
+
+            <a href="https://www.instagram.com/parviz_tavakoli_kolour"
+               target="_blank" rel="noopener">◎</a>
 
         </div>
 
     </div>
 
-
     <div class="copyright">
-
         © 2026 Parviz Tavakoli-Kolour
-
     </div>
 
 </footer>
 
+<script src="js/main.js"></script>
 
 </body>
-
 </html>
+```
