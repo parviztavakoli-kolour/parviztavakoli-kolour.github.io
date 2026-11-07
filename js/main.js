@@ -1,4 +1,3 @@
-```javascript
 /* =========================================================
    PARVIZ TAVAKOLI-KOLOUR WEBSITE
    Main JavaScript
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         trigger.addEventListener("click", function (event) {
 
-            if (window.innerWidth <= 800) {
+            if (window.innerWidth <= 1050) {
 
                 event.preventDefault();
 
@@ -79,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         link.addEventListener("click", function () {
 
-            if (window.innerWidth <= 800) {
+            if (window.innerWidth <= 1050) {
 
                 mainNav?.classList.remove("open");
 
@@ -170,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("resize", function () {
 
-        if (window.innerWidth > 800) {
+        if (window.innerWidth > 1050) {
 
             mainNav?.classList.remove("open");
 
@@ -227,5 +226,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-```
 
