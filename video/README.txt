@@ -1,0 +1,1 @@
+reef-banner.mp4: approximately 14 seconds of user-supplied underwater footage, black side bars removed, silent H.264 at 30 fps. Original upload unchanged. Homepage preserves the portrait framing; banner-poster.jpg is a still from the same clip.

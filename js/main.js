@@ -227,3 +227,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+// Optional local clip. Missing or blocked media leaves the reef photograph visible.
+document.addEventListener("DOMContentLoaded", async function () {
+    const video = document.querySelector(".hero-video");
+    const toggle = document.querySelector(".hero-video-toggle");
+    if (!video || !toggle) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const source = video.dataset.videoSrc;
+    video.muted = true;
+    video.src = source;
+    toggle.hidden = false;
+    const play = () => video.play().catch(() => { toggle.textContent = "Play background video"; });
+    video.addEventListener("playing", () => { video.classList.add("is-playing"); toggle.textContent = "Pause background video"; });
+    video.addEventListener("pause", () => { toggle.textContent = "Play background video"; });
+    video.addEventListener("error", () => { video.classList.remove("is-playing"); toggle.hidden = true; });
+    toggle.addEventListener("click", () => { if (video.paused) play(); else video.pause(); });
+    reducedMotion.addEventListener("change", event => { if (event.matches) video.pause(); });
+    if (!reducedMotion.matches) play();
+});

@@ -1,6 +1,6 @@
 /* =========================================================
    PARVIZ TAVAKOLI-KOLOUR
-   CORAL REEF ECOLOGY WEBSITE
+   CORAL ECOPHYSIOLOGY WEBSITE
    ========================================================= */
 
 
@@ -1607,3 +1607,53 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--aqua); outline-
 .visitor-map-widget img { height: auto; }
 .visitor-map-widget noscript p { color: var(--text); }
 .footer-content .visitor-map-note { margin-top: 10px; font-size: .7rem; line-height: 1.5; }
+
+/* Contact-only visitor map, compact text publications, and optional video banner. */
+.visitor-map-contact { width: 208px; max-width: 100%; margin-top: 30px; }
+.visitor-map-contact h3 { font-size: .85rem; margin-bottom: 12px; }
+.visitor-map-contact .visitor-map-widget { width: 208px; max-width: 100%; padding: 0; background: #000; border-radius: 0; }
+.visitor-map-contact .visitor-map-note { font-size: .7rem; margin-top: 8px; }
+.visitor-map-contact .visitor-map-widget noscript p { color: #fff; }
+.publication-card { display: block; min-height: 0; }
+.publication-card > .publication-links { padding: 0 40px 28px; margin-top: 0; }
+.selected-publications .publication-content h2 { font-size: clamp(1.3rem, 2.3vw, 1.9rem); line-height: 1.35; }
+.full-publication h3 { font-size: 1.1rem; line-height: 1.45; margin-bottom: 10px; }
+.full-publication h3 a:hover { color: var(--teal); text-decoration: underline; }
+.full-publication .text-link { margin-top: 10px; }
+.hero { overflow: hidden; isolation: isolate; background: var(--deep); }
+.hero-poster, .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-poster { z-index: 0; }
+.hero-video { z-index: 1; opacity: 0; }
+.hero-video.is-playing { opacity: 1; }
+.hero-overlay { z-index: 2; background: linear-gradient(90deg,rgba(6,34,40,.72),rgba(6,34,40,.18)); }
+.hero-content { z-index: 3; }
+.hero-video-toggle { position: absolute; z-index: 4; right: 24px; bottom: 20px; padding: 8px 12px; border: 1px solid #ffffff88; background: #09282fcc; color: #fff; border-radius: 4px; cursor: pointer; font-size: .75rem; }
+.hero-video-toggle[hidden] { display: none; }
+
+/* Portrait field footage: keep the whole image visible alongside the introduction. */
+.hero { min-height: 640px; background: #09282f; }
+.hero-media { position: absolute; top: 0; right: 0; bottom: 0; width: 36%; overflow: hidden; }
+.hero-media .hero-poster, .hero-media .hero-video { object-fit: contain; }
+.hero-overlay { display: none; }
+.hero-content { padding: 70px 0; }
+.hero h1 { max-width: 62%; font-size: clamp(2rem, 4.8vw, 4.3rem); }
+.hero-kicker, .hero-position, .hero-affiliation, .hero-buttons { max-width: 60%; }
+@media (max-width: 700px) {
+ .hero { flex-direction: column; min-height: 0; }
+ .hero-content { order: 1; padding: 48px 0 32px; }
+ .hero h1 { max-width: 100%; font-size: clamp(1.8rem, 7.5vw, 3.2rem); }
+ .hero-kicker, .hero-position, .hero-affiliation, .hero-buttons { max-width: 100%; }
+ .hero-media { order: 2; position: relative; width: 100%; height: 440px; }
+ .hero-video-toggle { bottom: 16px; right: 16px; }
+}
+
+/* Ecophysiology focus panel and concise publication descriptions. */
+.research-focus-panel { background: #09282f; color: #fff; padding: clamp(32px, 6vw, 72px); display: flex; flex-direction: column; justify-content: center; }
+.research-focus-panel .section-label { color: #a5dacf; }
+.research-focus-panel h2 { font-size: clamp(1.7rem, 2.8vw, 2.6rem); margin: 18px 0 30px; }
+.research-focus-panel dl { margin: 0; }
+.research-focus-panel dl > div { padding: 18px 0; border-top: 1px solid #ffffff30; }
+.research-focus-panel dt { font-weight: 700; color: #a5dacf; }
+.research-focus-panel dd { margin: 5px 0 0; color: #e0ece9; line-height: 1.6; }
+.publication-summary { margin: 12px 0 16px; line-height: 1.7; color: var(--muted); max-width: 75ch; }
+.copyright { line-height: 1.8; color: rgba(255,255,255,.72); }
